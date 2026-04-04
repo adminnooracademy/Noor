@@ -1,0 +1,3031 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Noor Academy adalah lembaga kursus bahasa Inggris di Bogor yang menghadirkan pembelajaran interaktif, terarah, dan nyaman untuk anak, remaja, mahasiswa, hingga profesional.">
+    <meta name="keywords" content="kursus bahasa Inggris, bahasa Inggris Bogor, les Inggris, English course, Global Noor Academy, speaking English, grammar, TOEFL preparation">
+    <meta property="og:title" content="Global Noor Academy | Kursus Bahasa Inggris di Bogor">
+    <meta property="og:description" content="Belajar bahasa Inggris dengan metode interaktif, terarah, dan nyaman. Cocok untuk anak, remaja, mahasiswa, dan profesional.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a4d3e">
+    <title>Global Noor Academy | Kursus Bahasa Inggris di Bogor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #2f6f62;
+            --secondary-green: #4c8c7d;
+            --light-green: #eef8f4;
+            --cream: #fffdf9;
+            --white: #ffffff;
+            --soft-gold: #d4b06a;
+            --olive: #7f9271;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+            --text-light: #6b7280;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 10px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.10);
+            --shadow-xl: 0 22px 45px rgba(26,77,62,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary-green);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section { padding: 84px 0; }
+        .section-sm { padding: 50px 0; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--soft-gold);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.06rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-accent {
+            background: var(--soft-gold);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            background: #b8984f;
+            transform: translateY(-2px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(16px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.3rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .logo-text span { color: var(--soft-gold); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary-green); }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            background: transparent;
+            border: none;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+            padding-top: 95px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 150%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%231a4d3e" opacity="0.03"/></svg>') repeat;
+            background-size: 100px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-50px) rotate(360deg); }
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content,
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--primary-green);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 25px;
+        }
+
+        .hero-badge i { color: var(--soft-gold); }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .hero h1 span { color: var(--soft-gold); }
+
+        .hero p {
+            font-size: 1.12rem;
+            color: var(--text-gray);
+            margin-bottom: 35px;
+            max-width: 540px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-green);
+        }
+
+        .stat-item p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .hero-image-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+        }
+
+        .hero-img {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background: var(--white);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-height: 210px;
+        }
+
+        .hero-img.large {
+            grid-row: span 2;
+            aspect-ratio: auto;
+            min-height: 440px;
+        }
+
+        .hero-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 1;
+        }
+
+        .hero-img.books::before {
+            background:
+              linear-gradient(rgba(47,111,98,.58), rgba(76,140,125,.58)),
+              url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        }
+
+        .hero-img.library::before {
+            background:
+              linear-gradient(rgba(47,111,98,.56), rgba(76,140,125,.56)),
+              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        }
+
+        .hero-img.classroom::before {
+            background:
+              linear-gradient(rgba(47,111,98,.56), rgba(76,140,125,.56)),
+              url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        }
+
+        .hero-img-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+            padding: 28px;
+        }
+
+        .hero-img-content i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--soft-gold);
+        }
+
+        .hero-img.large .hero-img-content i { font-size: 4rem; }
+
+        .hero-img-content h4 {
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-img-content p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 0;
+            color: rgba(255,255,255,.9);
+        }
+
+        .about {
+            background: var(--white);
+        }
+
+        .about-content,
+        .method-content,
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image,
+        .method-image {
+            position: relative;
+        }
+
+        .about-img-main,
+        .method-img-main {
+            width: 100%;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            aspect-ratio: 4/5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .method-img-main {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+        }
+
+        .about-img-main::before,
+        .method-img-main::before {
+            content: '';
+            position: absolute;
+            inset: 24px;
+            border: 2px solid rgba(255,255,255,0.22);
+            border-radius: 18px;
+        }
+
+        .about-img-main::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 3px solid rgba(201,169,98,.55);
+            border-radius: 50%;
+            top: 30px;
+            right: 30px;
+        }
+
+        .about-img-main-content,
+        .method-img-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 1;
+            padding: 28px;
+        }
+
+        .about-img-main-content i,
+        .method-img-content i {
+            font-size: 5rem;
+            color: var(--soft-gold);
+            margin-bottom: 20px;
+        }
+
+        .about-img-main-content h3,
+        .method-img-content h3 {
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 30px;
+            left: -30px;
+            background: var(--soft-gold);
+            color: var(--white);
+            padding: 20px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+        }
+
+        .experience-badge h4 {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .experience-badge p { font-size: 0.92rem; opacity: .92; }
+
+        .about-text h2,
+        .method-steps h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text > p,
+        .method-steps > p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-feature-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--light-green);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .about-feature p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .about-cta { display: flex; gap: 15px; flex-wrap: wrap; }
+
+        .visual-showcase {
+            margin-top: 36px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .showcase-card {
+            border-radius: 18px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #20453c, #567263);
+            min-height: 170px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .showcase-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: .96;
+        }
+
+        .showcase-card.one::before {
+            background:
+              linear-gradient(135deg, rgba(26,77,62,.96), rgba(45,106,90,.92));
+        }
+
+        .showcase-card.two::before {
+            background:
+              linear-gradient(135deg, rgba(107,124,94,.96), rgba(45,106,90,.92));
+        }
+
+        .showcase-card.three::before {
+            background:
+              linear-gradient(135deg, rgba(36,77,68,.96), rgba(26,77,62,.92));
+        }
+
+        .showcase-inner {
+            position: relative;
+            z-index: 1;
+            padding: 24px;
+            color: var(--white);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        .showcase-inner i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(201,169,98,.95);
+        }
+
+        .showcase-inner h4 {
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 6px;
+        }
+
+        .showcase-inner p {
+            color: rgba(255,255,255,.88);
+            font-size: .92rem;
+        }
+
+        .values { background: var(--cream); }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--soft-gold);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .value-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .value-card p { font-size: 0.92rem; color: var(--text-light); }
+
+        .programs { background: var(--white); }
+
+        .programs-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: var(--cream);
+            border: none;
+            border-radius: 30px;
+            font-weight: 500;
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .program-card {
+            background: var(--cream);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--soft-gold);
+        }
+
+        .program-header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            padding: 30px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(201,169,98,0.95);
+            border-radius: 50%;
+        }
+
+        .program-icon {
+            font-size: 2.5rem;
+            color: var(--soft-gold);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .program-header h3 {
+            font-size: 1.3rem;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .program-body { padding: 35px 25px 25px; }
+
+        .program-target {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .program-body p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .program-benefits { margin-bottom: 20px; }
+
+        .program-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .program-benefits li i {
+            color: var(--primary-green);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .program-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .program-duration {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .program-duration i {
+            margin-right: 5px;
+            color: var(--primary-green);
+        }
+
+        .program-btn {
+            padding: 10px 20px;
+            background: var(--primary-green);
+            color: var(--white);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .program-btn:hover { background: var(--secondary-green); }
+
+        .why-choose {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: var(--white);
+        }
+
+        .why-choose .section-header h2,
+        .why-choose .section-header p { color: var(--white); }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--soft-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .why-card h4 {
+            font-size: 1.15rem;
+            color: var(--white);
+            margin-bottom: 12px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .method { background: var(--cream); }
+
+        .method-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .method-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-green);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .step-content h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .step-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .testimonials { background: var(--white); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--soft-gold);
+        }
+
+        .quote-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--light-green);
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-rating {
+            color: var(--soft-gold);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card > p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            font-style: italic;
+            line-height: 1.75;
+            min-height: 145px;
+        }
+
+        .testimonial-footer {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .testimonial-footer h4 {
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 3px;
+        }
+
+        .testimonial-footer p {
+            font-size: 0.86rem;
+            color: var(--text-light);
+        }
+
+        .testimonial-badge {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .faq { background: var(--cream); }
+
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover { color: var(--primary-green); }
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--primary-green);
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 25px 20px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.08rem;
+            opacity: 0.92;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta .btn-secondary {
+            border-color: var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+
+        .cta .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        .contact { background: var(--white); }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-text h4 {
+            font-size: 0.92rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+
+        .contact-item-text p,
+        .contact-item-text a {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            word-break: break-word;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-green);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+        }
+
+        .contact-form-wrapper {
+            background: var(--cream);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-note {
+            text-align: center;
+            color: var(--text-light);
+            font-size: .92rem;
+            margin-bottom: 24px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(26, 77, 62, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .map-card {
+            width: 100%;
+            min-height: 250px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--secondary-green) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            color: var(--white);
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            padding: 24px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-card i {
+            font-size: 2.5rem;
+            color: var(--soft-gold);
+        }
+
+        .map-card p {
+            opacity: 0.92;
+            color: rgba(255,255,255,.92);
+        }
+
+        .map-card .btn {
+            margin-top: 10px;
+            background: rgba(255,255,255,.16);
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,.2);
+        }
+
+        .map-card .btn:hover {
+            background: rgba(255,255,255,.24);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about .logo { margin-bottom: 20px; }
+        .footer-about .logo-text { color: var(--white); }
+        .footer-about .logo-icon { background: var(--soft-gold); }
+
+        .footer-about p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--soft-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-section ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-section ul a {
+            opacity: 0.84;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-section ul a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact-item i {
+            color: var(--soft-gold);
+            margin-top: 4px;
+        }
+
+        .footer-contact-item p,
+        .footer-contact-item a {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            opacity: 0.75;
+            font-size: 0.9rem;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 62px;
+            height: 62px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .hidden-program { display: none !important; }
+
+        @media (max-width: 1024px) {
+            .hero .container,
+            .youtube-grid,
+            .about-content,
+            .method-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 { font-size: 2.6rem; }
+
+            .programs-grid,
+            .testimonials-grid,
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .schedule-boxes { grid-template-columns: 1fr; }
+
+            .footer-content { grid-template-columns: repeat(2, 1fr); }
+
+            .visual-showcase { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-cta { display: none; }
+
+            .mobile-toggle { display: flex; }
+
+            .navbar.mobile-open .nav-links {
+                display: flex;
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 20px;
+                right: 20px;
+                background: var(--white);
+                border-radius: 16px;
+                box-shadow: var(--shadow-xl);
+                padding: 18px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+
+            .navbar.mobile-open .nav-cta {
+                display: flex;
+                position: absolute;
+                top: calc(100% + 290px);
+                left: 20px;
+                right: 20px;
+                background: var(--white);
+                border-radius: 16px;
+                box-shadow: var(--shadow-xl);
+                padding: 15px 20px 20px;
+            }
+
+            .navbar.mobile-open .nav-cta .btn { width: 100%; }
+
+            .hero {
+                min-height: auto;
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 { font-size: 2.1rem; }
+            .hero-stats { flex-wrap: wrap; gap: 25px; }
+
+            .hero-image-grid { grid-template-columns: 1fr; }
+            .hero-img.large { min-height: 260px; grid-row: auto; }
+
+            .section { padding: 64px 0; }
+
+            .section-header h2 { font-size: 1.9rem; }
+
+            .programs-grid,
+            .testimonials-grid,
+            .why-grid,
+            .values-grid,
+            .gallery-grid,
+            .pricing-grid,
+            .schedule-boxes { grid-template-columns: 1fr; }
+
+            .program-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-row { grid-template-columns: 1fr; }
+
+            .cta h2 { font-size: 1.9rem; }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-about .logo,
+            .footer-social { justify-content: center; }
+
+            .footer-contact-item { justify-content: center; }
+
+            .experience-badge {
+                left: 20px;
+                bottom: -20px;
+            }
+
+            .about-features { grid-template-columns: 1fr; }
+
+            .floating-whatsapp {
+                width: 56px;
+                height: 56px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+
+            .btn-group,
+            .about-cta,
+            .cta-buttons { width: 100%; }
+
+            .hero p { font-size: 1rem; }
+            .hero h1 { font-size: 1.85rem; }
+
+            .programs-tabs { gap: 8px; }
+
+            .tab-btn {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+
+            .contact-form-wrapper { padding: 24px; }
+
+            .hero-stats { gap: 16px; }
+            .stat-item { min-width: 110px; }
+        }
+
+        .gallery-section {
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-card {
+            min-height: 220px;
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .gallery-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 1;
+        }
+
+        .gallery-card.g1::before {
+            background:
+              radial-gradient(circle at 18% 18%, rgba(255,255,255,.16) 0, transparent 18%),
+              linear-gradient(135deg, #193f34, #2d6a5a);
+        }
+
+        .gallery-card.g2::before {
+            background:
+              radial-gradient(circle at 80% 20%, rgba(255,255,255,.12) 0, transparent 20%),
+              linear-gradient(135deg, #385f53, #6b7c5e);
+        }
+
+        .gallery-card.g3::before {
+            background:
+              radial-gradient(circle at 20% 80%, rgba(255,255,255,.12) 0, transparent 20%),
+              linear-gradient(135deg, #1a4d3e, #557062);
+        }
+
+        .gallery-card.g4::before {
+            background:
+              radial-gradient(circle at 85% 75%, rgba(255,255,255,.12) 0, transparent 20%),
+              linear-gradient(135deg, #2d6a5a, #24493f);
+        }
+
+        .gallery-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            height: 100%;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .gallery-content i {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            font-size: 2rem;
+            color: var(--soft-gold);
+        }
+
+        .gallery-content h4 {
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .gallery-content p {
+            color: rgba(255,255,255,.9);
+            font-size: .92rem;
+            line-height: 1.6;
+        }
+
+        .youtube-materials {
+            background: var(--white);
+        }
+
+        .youtube-intro {
+            max-width: 760px;
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+
+        .youtube-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .youtube-main,
+        .youtube-side-card {
+            background: var(--cream);
+            border: 1px solid var(--border-light);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .youtube-thumb {
+            min-height: 280px;
+            position: relative;
+            background: linear-gradient(135deg, #1a4d3e, #2d6a5a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
+
+        .youtube-thumb::before {
+            content: '';
+            position: absolute;
+            inset: 18px;
+            border: 2px solid rgba(255,255,255,.18);
+            border-radius: 18px;
+        }
+
+        .youtube-play {
+            position: relative;
+            z-index: 1;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.2rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,.15);
+            margin-bottom: 18px;
+        }
+
+        .youtube-thumb-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .youtube-thumb-inner h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .youtube-thumb-inner p {
+            color: rgba(255,255,255,.9);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .youtube-body {
+            padding: 28px;
+        }
+
+        .youtube-body h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 14px;
+        }
+
+        .youtube-list {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .youtube-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--text-gray);
+            font-size: .95rem;
+        }
+
+        .youtube-list i {
+            color: var(--primary-green);
+            margin-top: 4px;
+        }
+
+        .youtube-side-wrap {
+            display: grid;
+            gap: 20px;
+        }
+
+        .youtube-side-card {
+            padding: 24px;
+        }
+
+        .youtube-side-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .youtube-side-card p {
+            color: var(--text-gray);
+            font-size: .94rem;
+            margin-bottom: 16px;
+        }
+
+        .resource-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .resource-badge {
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: .82rem;
+            font-weight: 600;
+        }
+
+
+        .pricing-section {
+            background: var(--cream);
+        }
+
+        .pricing-note {
+            max-width: 760px;
+            margin: 0 auto 34px;
+            text-align: center;
+            color: var(--text-gray);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .price-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--soft-gold);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--soft-gold);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: var(--soft-gold);
+            color: var(--white);
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 700;
+        }
+
+        .price-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .price-target {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: .8rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .price-amount {
+            margin-bottom: 8px;
+            color: var(--primary-green);
+            font-size: 2.2rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.1;
+        }
+
+        .price-amount span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .price-desc {
+            color: var(--text-gray);
+            font-size: .94rem;
+            margin-bottom: 18px;
+        }
+
+        .price-list {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .price-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: var(--text-gray);
+            font-size: .93rem;
+        }
+
+        .price-list i {
+            color: var(--primary-green);
+            margin-top: 4px;
+        }
+
+        .schedule-boxes {
+            margin-top: 34px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .schedule-box {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .schedule-box h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.02rem;
+            margin-bottom: 12px;
+        }
+
+        .schedule-box p {
+            color: var(--text-gray);
+            font-size: .94rem;
+            margin-bottom: 10px;
+        }
+
+        .schedule-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .schedule-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: var(--text-gray);
+            font-size: .93rem;
+        }
+
+        .schedule-list i {
+            color: var(--soft-gold);
+            margin-top: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="Global Noor Academy">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span class="logo-text">Global Noor<span>Academy</span></span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#programs">Program</a></li>
+                <li><a href="#pricing">Biaya</a></li>
+                <li><a href="#method">Metode</a></li>
+                <li><a href="#youtube-materials">YouTube</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20konsultasi%20tentang%20program%20kursus." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    Hubungi Kami
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Buka menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Lembaga Kursus Bahasa Inggris Terpercaya di Bogor</span>
+                </div>
+                <h1>Kuasai Bahasa Inggris dengan <span>Gaya Belajar yang Tepat</span></h1>
+                <p>Bergabunglah dengan Global Noor Academy dan rasakan pengalaman belajar bahasa Inggris yang interaktif, terarah, dan menyenangkan. Cocok untuk anak, remaja, mahasiswa, pekerja, dan masyarakat umum.</p>
+
+                <div class="btn-group">
+                    <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20daftar%20kursus." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fas fa-rocket"></i>
+                        Daftar Sekarang
+                    </a>
+                    <a href="#programs" class="btn btn-secondary">
+                        <i class="fas fa-book-open"></i>
+                        Lihat Program
+                    </a>
+                    <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" class="btn btn-accent" target="_blank" rel="noopener">
+                        <i class="fab fa-youtube"></i>
+                        Akses Materi YouTube
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Siswa Aktif</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5 Tahun</h3>
+                        <p>Pengalaman Mengajar</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Tingkat Kepuasan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-grid">
+                    <div class="hero-img large books">
+                        <div class="hero-img-content">
+                            <i class="fas fa-book-open-reader"></i>
+                            <h4>Belajar Nyaman dan Terarah</h4>
+                            <p>Materi tersusun rapi, suasana belajar kondusif, dan fokus pada hasil nyata.</p>
+                        </div>
+                    </div>
+                    <div class="hero-img library">
+                        <div class="hero-img-content">
+                            <i class="fas fa-school"></i>
+                            <h4>Interaksi Kelas</h4>
+                            <p>Aktif dan profesional</p>
+                        </div>
+                    </div>
+                    <div class="hero-img classroom">
+                        <div class="hero-img-content">
+                            <i class="fas fa-comments"></i>
+                            <h4>Diskusi Terarah</h4>
+                            <p>Fokus pada komunikasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-img-main">
+                        <div class="about-img-main-content">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Membentuk Karakter<br>dan Kemampuan</h3>
+                        </div>
+                    </div>
+                    <div class="experience-badge">
+                        <h4>5+</h4>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="section-label">Tentang Kami</span>
+                    <h2>Global Noor Academy: Mitra Terpercaya Belajar Bahasa Inggris</h2>
+                    <p>Global Noor Academy hadir untuk memberikan pengalaman belajar bahasa Inggris yang lebih terarah, nyaman, dan mudah diikuti. Kami percaya bahwa belajar bahasa Inggris bukan hanya soal grammar dan vocabulary, tetapi juga tentang membangun keberanian berbicara, kepercayaan diri, dan kesiapan menghadapi kebutuhan akademik maupun profesional.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <p>Pendekatan personal sesuai kebutuhan siswa</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <p>Pengajar berkompeten dan suportif</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <p>Lingkungan belajar nyaman dan rapi</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <p>Materi terstruktur dan bertahap</p>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i>
+                            Konsultasi Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-showcase">
+                <div class="showcase-card one">
+                    <div class="showcase-inner">
+                        <i class="fas fa-book"></i>
+                        <h4>Materi Terarah</h4>
+                        <p>Belajar dari dasar hingga tingkat lanjut dengan urutan yang jelas.</p>
+                    </div>
+                </div>
+                <div class="showcase-card two">
+                    <div class="showcase-inner">
+                        <i class="fas fa-laptop"></i>
+                        <h4>Belajar Relevan</h4>
+                        <p>Topik disesuaikan dengan kebutuhan sekolah, kampus, dan dunia kerja.</p>
+                    </div>
+                </div>
+                <div class="showcase-card three">
+                    <div class="showcase-inner">
+                        <i class="fas fa-chalkboard"></i>
+                        <h4>Suasana Kondusif</h4>
+                        <p>Fokus belajar lebih terjaga dengan kelas yang nyaman dan suportif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section values">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nilai-Nilai Kami</span>
+                <h2>Prinsip yang Membimbing Kami</h2>
+                <p>Kami menjunjung tinggi nilai-nilai yang menjadi fondasi dalam setiap proses pembelajaran di Global Noor Academy.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Disiplin</h4>
+                    <p>Kami mengajarkan pentingnya menghargai waktu, konsisten dalam belajar, dan bertanggung jawab pada proses.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Integritas</h4>
+                    <p>Kami membangun kepercayaan melalui kejujuran, tanggung jawab, dan kualitas layanan yang dijaga dengan baik.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Kepedulian</h4>
+                    <p>Kami menciptakan suasana belajar yang hangat, aman, menghargai proses, dan mendukung perkembangan setiap siswa.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-star"></i></div>
+                    <h4>Semangat Belajar</h4>
+                    <p>Kami mendorong rasa ingin tahu, keberanian mencoba, dan kebiasaan belajar yang tumbuh secara berkelanjutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Program Kursus</span>
+                <h2>Pilihan Program untuk Setiap Kebutuhan</h2>
+                <p>Kami menyediakan berbagai program yang disesuaikan dengan usia, tujuan belajar, dan level kemampuan peserta.</p>
+            </div>
+
+            <div class="programs-tabs">
+                <button class="tab-btn active" data-tab="all">Semua Program</button>
+                <button class="tab-btn" data-tab="kids">Anak-Anak</button>
+                <button class="tab-btn" data-tab="teens">Remaja</button>
+                <button class="tab-btn" data-tab="adults">Dewasa</button>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card" data-category="kids">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-child"></i></div>
+                        <h3>English for Kids</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> Usia 6-12 Tahun</span>
+                        <p>Program khusus anak-anak dengan pendekatan bermain yang menyenangkan sambil membangun fondasi bahasa Inggris yang kuat.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Pengenalan kosakata sehari-hari</li>
+                            <li><i class="fas fa-check-circle"></i> Lagu dan games edukatif</li>
+                            <li><i class="fas fa-check-circle"></i> Pengucapan yang benar sejak dini</li>
+                            <li><i class="fas fa-check-circle"></i> Percakapan dasar yang fun</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> 90 menit x 10 pertemuan/bulan</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20English%20for%20Kids." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-category="teens">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3>English for Teens</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> SMP & SMA</span>
+                        <p>Program untuk siswa sekolah menengah yang ingin meningkatkan kemampuan bahasa Inggris untuk akademik dan komunikasi sehari-hari.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Peningkatan vocabulary</li>
+                            <li><i class="fas fa-check-circle"></i> Penguatan grammar</li>
+                            <li><i class="fas fa-check-circle"></i> Persiapan tugas dan ujian sekolah</li>
+                            <li><i class="fas fa-check-circle"></i> Speaking dan writing terarah</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> 90 menit x 10 pertemuan/bulan</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20English%20for%20Teens." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-category="adults">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>General English</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> Mahasiswa & Umum</span>
+                        <p>Program komprehensif untuk membangun kemampuan bahasa Inggris secara menyeluruh dari dasar hingga menengah.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Listening, speaking, reading, writing</li>
+                            <li><i class="fas fa-check-circle"></i> Grammar terstruktur</li>
+                            <li><i class="fas fa-check-circle"></i> Percakapan praktis</li>
+                            <li><i class="fas fa-check-circle"></i> Materi relevan dengan kehidupan nyata</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> 90 menit x 10 pertemuan/bulan</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20General%20English." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-category="all adults teens">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Conversation Class</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> Semua Level</span>
+                        <p>Fokus pada pengembangan kemampuan berbicara dengan metode immersive dan diskusi interaktif.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Praktik percakapan intensif</li>
+                            <li><i class="fas fa-check-circle"></i> Topik menarik dan relevan</li>
+                            <li><i class="fas fa-check-circle"></i> Feedback langsung dari pengajar</li>
+                            <li><i class="fas fa-check-circle"></i> Meningkatkan kepercayaan diri</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> 90 menit x 10 pertemuan/bulan</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20Conversation%20Class." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-category="all teens adults">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h3>Grammar Class</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> Semua Level</span>
+                        <p>Program intensif untuk memahami dan menguasai grammar bahasa Inggris dengan sistematis dan menyenangkan.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Penjelasan grammar yang jelas</li>
+                            <li><i class="fas fa-check-circle"></i> Latihan intensif</li>
+                            <li><i class="fas fa-check-circle"></i> Aplikasi dalam konteks nyata</li>
+                            <li><i class="fas fa-check-circle"></i> Evaluasi berkala</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> 90 menit x 10 pertemuan/bulan</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20Grammar%20Class." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-category="adults teens">
+                    <div class="program-header">
+                        <div class="program-icon"><i class="fas fa-university"></i></div>
+                        <h3>English for Professionals</h3>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-target"><i class="fas fa-users"></i> Karyawan & Pekerja</span>
+                        <p>Program khusus untuk meningkatkan kemampuan bahasa Inggris dalam konteks profesional dan karier.</p>
+                        <ul class="program-benefits">
+                            <li><i class="fas fa-check-circle"></i> Business English</li>
+                            <li><i class="fas fa-check-circle"></i> Email dan correspondence</li>
+                            <li><i class="fas fa-check-circle"></i> Presentasi dan meeting</li>
+                            <li><i class="fas fa-check-circle"></i> Interview skills</li>
+                        </ul>
+                        <div class="program-footer">
+                            <span class="program-duration"><i class="far fa-clock"></i> Jadwal fleksibel, privat atau kelompok</span>
+                            <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20info%20English%20for%20Professionals." class="program-btn" target="_blank" rel="noopener">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section why-choose">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" style="background: rgba(255,255,255,0.16); color: var(--white);">Keunggulan</span>
+                <h2>Mengapa Memilih Global Noor Academy?</h2>
+                <p>Kami berkomitmen memberikan pengalaman belajar terbaik dengan pendekatan yang rapi, hangat, dan relevan untuk kebutuhan nyata.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h4>Pengajar Ramah & Kompeten</h4>
+                    <p>Tim pengajar kami berpengalaman, sabar, dan mudah didekati dalam membimbing setiap siswa sesuai kebutuhan belajarnya.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h4>Metode Interaktif</h4>
+                    <p>Pembelajaran dibuat aktif dan melibatkan siswa secara langsung, sehingga proses belajar terasa hidup dan tidak monoton.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <h4>Fokus pada Komunikasi</h4>
+                    <p>Kami membantu siswa berani berbicara dan menggunakan bahasa Inggris dalam situasi nyata dengan lebih percaya diri.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-home"></i></div>
+                    <h4>Lingkungan Nyaman</h4>
+                    <p>Ruang belajar yang kondusif dan rapi membantu siswa lebih fokus, tenang, dan menikmati proses pembelajaran.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Pendampingan Perkembangan</h4>
+                    <p>Kemajuan siswa dipantau secara berkala agar proses belajar tetap terarah dan hasilnya terasa lebih nyata.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-road"></i></div>
+                    <h4>Materi Terstruktur</h4>
+                    <p>Kurikulum disusun bertahap dari dasar hingga lanjutan, sehingga kemampuan dibangun dengan fondasi yang kuat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="method" class="section method">
+        <div class="container">
+            <div class="method-content">
+                <div class="method-image">
+                    <div class="method-img-main">
+                        <div class="method-img-content">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Metode Pembelajaran<br>yang Efektif</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-steps">
+                    <span class="section-label">Metode Kami</span>
+                    <h2>Pendekatan yang Berpusat pada Siswa</h2>
+                    <p>Kami menerapkan metode yang membantu siswa memahami materi dengan lebih mudah, aktif berlatih, dan berkembang secara bertahap sesuai level masing-masing.</p>
+
+                    <div class="method-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Student-Centered Learning</h4>
+                            <p>Siswa menjadi fokus utama. Kami menyesuaikan ritme belajar, kebutuhan, dan tujuan pembelajaran agar prosesnya lebih efektif.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Active Practice</h4>
+                            <p>Siswa tidak hanya mendengar teori, tetapi juga langsung mempraktikkan materi melalui speaking, diskusi, latihan, dan simulasi.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Structured Progress</h4>
+                            <p>Materi disusun secara bertahap dari dasar menuju level berikutnya, sehingga perkembangan terasa lebih jelas dan terukur.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Feedback & Evaluation</h4>
+                            <p>Pengajar memberikan arahan, koreksi, dan evaluasi berkala untuk membantu siswa memahami kekuatan dan area yang perlu ditingkatkan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Visual Pembelajaran</span>
+                <h2>Suasana Belajar yang Lebih Hidup</h2>
+                <p>Kami tambahkan visual kelas dan interaksi pembelajaran dengan nuansa lebih cerah, profesional, dan tetap aman tanpa gambar wanita.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card g1">
+                    <div class="gallery-content">
+                        <i class="fas fa-person-chalkboard"></i>
+                        <h4>Interaksi di Kelas</h4>
+                        <p>Diskusi aktif, penjelasan terarah, dan suasana belajar yang lebih komunikatif.</p>
+                    </div>
+                </div>
+                <div class="gallery-card g2">
+                    <div class="gallery-content">
+                        <i class="fas fa-user-group"></i>
+                        <h4>Latihan Bersama</h4>
+                        <p>Belajar lebih hidup melalui percakapan, tanya jawab, dan kerja kelompok kecil.</p>
+                    </div>
+                </div>
+                <div class="gallery-card g3">
+                    <div class="gallery-content">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Materi Kelas</h4>
+                        <p>Materi pendukung disusun agar mudah diikuti, dipahami, dan diulang kembali.</p>
+                    </div>
+                </div>
+                <div class="gallery-card g4">
+                    <div class="gallery-content">
+                        <i class="fas fa-headset"></i>
+                        <h4>Praktik Listening</h4>
+                        <p>Aktivitas mendengar dan memahami konteks membantu siswa lebih siap berkomunikasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Biaya & Jadwal</span>
+                <h2>Pilihan Biaya yang Terjangkau</h2>
+                <p>Kami menyesuaikan biaya agar tetap ramah untuk pelajar, mahasiswa, dan keluarga, tanpa membuat kualitas belajar terasa turun.</p>
+            </div>
+
+            <p class="pricing-note">
+                Harga berikut adalah kisaran biaya bulanan yang wajar dan tidak terlalu mahal untuk lembaga kursus bahasa Inggris tingkat lokal. Biaya tetap bisa disesuaikan untuk kelas privat, kelompok kecil, atau kebutuhan khusus.
+            </p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Kelas Reguler Anak & Remaja</h3>
+                    <span class="price-target">English for Kids & Teens</span>
+                    <div class="price-amount">Rp175.000 <span>/ bulan</span></div>
+                    <p class="price-desc">Cocok untuk siswa sekolah yang ingin belajar rutin dengan biaya ringan.</p>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check-circle"></i><span>8 kali pertemuan per bulan</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Durasi 90 sampai 90 menit per sesi</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Materi dasar, speaking, grammar, dan latihan</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Pilihan kelas kecil agar belajar lebih fokus</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285235516178?text=Halo%20Global%20Noor%20Academy,%20saya%20ingin%20tanya%20biaya%20kelas%20reguler." class="btn btn-primary" target="_blank" rel="noopener">Tanya Biaya</a>
+                </div>
+
+                <div class="price-card featured">
+                    <span class="price-badge">Paling Diminati</span>
+                    <h3>Kelas Umum & Conversation</h3>
+                    <span class="price-target">Mahasiswa, Umum, dan Pekerja</span>
+                    <div class="price-amount">Rp225.000 <span>/ bulan</span></div>
+                    <p class="price-desc">Pilihan seimbang untuk yang ingin belajar aktif dengan fokus komunikasi dan praktik nyata.</p>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check-circle"></i><span>8 kali pertemuan per bulan</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Fokus speaking, listening, grammar, dan confidence</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Bisa dipadukan dengan materi video YouTube</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Cocok untuk kebutuhan sekolah, kampus, dan kerja</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285235516178?text=Halo%20Global%20Noor%20Academy,%20saya%20ingin%20tanya%20biaya%20kelas%20umum." class="btn btn-accent" target="_blank" rel="noopener">Pilih Kelas Ini</a>
+                </div>
+
+                <div class="price-card">
+                    <h3>Kelas Privat / Profesional</h3>
+                    <span class="price-target">Privat atau Kebutuhan Khusus</span>
+                    <div class="price-amount">Mulai Rp350.000 <span>/ bulan</span></div>
+                    <p class="price-desc">Untuk kebutuhan yang lebih spesifik seperti kerja, presentasi, interview, atau jadwal fleksibel.</p>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check-circle"></i><span>Jadwal lebih fleksibel</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Materi disesuaikan dengan target siswa</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Cocok untuk pekerja dan kelas privat</span></li>
+                        <li><i class="fas fa-check-circle"></i><span>Biaya bisa disesuaikan jumlah pertemuan</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285235516178?text=Halo%20Global%20Noor%20Academy,%20saya%20ingin%20konsultasi%20kelas%20privat." class="btn btn-primary" target="_blank" rel="noopener">Konsultasi Privat</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section youtube-materials" id="youtube-materials">
+        <div class="container">
+            <div class="youtube-intro">
+                <span class="section-label">Akses Materi</span>
+                <h2 style="font-size:2.3rem; margin-bottom:12px;">Materi Belajar juga Bisa Diakses lewat YouTube</h2>
+                <p style="color: var(--text-gray);">Kami tambahkan area khusus agar pengunjung lebih mudah mengakses materi pendukung, video pembelajaran, dan update konten edukatif dari kanal YouTube Global Noor Academy.</p>
+            </div>
+
+            <div class="youtube-grid">
+                <div class="youtube-main">
+                    <div class="youtube-thumb">
+                        <div class="youtube-thumb-inner">
+                            <div class="youtube-play"><i class="fab fa-youtube"></i></div>
+                            <h3>Belajar dari Video Materi Global Noor Academy</h3>
+                            <p>Akses video pembelajaran untuk speaking, grammar, vocabulary, listening, dan tips belajar bahasa Inggris secara lebih fleksibel.</p>
+                        </div>
+                    </div>
+                    <div class="youtube-body">
+                        <h4>Yang bisa diakses dari YouTube</h4>
+                        <ul class="youtube-list">
+                            <li><i class="fas fa-check-circle"></i><span>Materi dasar dan penguatan konsep bahasa Inggris</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Tips speaking, pronunciation, dan grammar praktis</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Konten belajar singkat yang mudah diikuti kapan saja</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Dokumentasi kegiatan dan update pembelajaran Global Noor Academy</span></li>
+                        </ul>
+                        <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" class="btn btn-primary" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                            Buka Channel YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <div class="youtube-side-wrap">
+                    <div class="youtube-side-card">
+                        <h4>Manfaat untuk siswa</h4>
+                        <p>Siswa bisa mengulang materi di rumah, belajar mandiri di luar jam kelas, dan mendapatkan tambahan penjelasan dengan format video yang lebih praktis.</p>
+                        <div class="resource-badges">
+                            <span class="resource-badge">Speaking</span>
+                            <span class="resource-badge">Grammar</span>
+                            <span class="resource-badge">Vocabulary</span>
+                        </div>
+                    </div>
+
+                    <div class="youtube-side-card">
+                        <h4>Akses cepat materi video</h4>
+                        <p>Kami juga menambahkan tombol akses YouTube di beberapa area website agar pengunjung lebih mudah menemukan materi dan konten pembelajaran terbaru.</p>
+                        <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" class="btn btn-accent" target="_blank" rel="noopener">
+                            <i class="fas fa-play-circle"></i>
+                            Lihat Materi YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Testimoni</span>
+                <h2>Apa Kata Mereka tentang Global Noor Academy</h2>
+                <p>Beberapa pengalaman positif dari siswa dan orang tua yang telah belajar bersama Global Noor Academy. Bagian ini dibuat tanpa gambar sesuai permintaan Anda.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>Belajar di Global Noor Academy terasa nyaman dan tidak bikin tegang. Materinya mudah dipahami, pengajarnya sabar, dan saya jadi jauh lebih berani speaking.</p>
+                    <div class="testimonial-footer">
+                        <h4>Rafi</h4>
+                        <p>Siswa SMA</p>
+                        <span class="testimonial-badge">Speaking Improvement</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>Anak saya jadi lebih semangat belajar bahasa Inggris. Penjelasannya jelas, kelasnya tertata, dan perkembangan belajarnya terasa lebih konsisten.</p>
+                    <div class="testimonial-footer">
+                        <h4>Bapak Andi</h4>
+                        <p>Orang Tua Siswa</p>
+                        <span class="testimonial-badge">English for Kids</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>Saya ikut kelas untuk kebutuhan kerja, terutama email dan percakapan profesional. Materinya relevan dan langsung bisa dipakai dalam pekerjaan sehari-hari.</p>
+                    <div class="testimonial-footer">
+                        <h4>Fikri</h4>
+                        <p>Karyawan Swasta</p>
+                        <span class="testimonial-badge">Professional English</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2>Pertanyaan yang Sering Diajukan</h2>
+                <p>Beberapa hal yang paling sering ditanyakan calon siswa dan orang tua sebelum bergabung dengan Global Noor Academy.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        <span>Apakah Global Noor Academy menerima pemula?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="max-height: 160px;">
+                        <div class="faq-answer-content">
+                            Ya. Global Noor Academy terbuka untuk pemula hingga level menengah. Program dan materi akan disesuaikan dengan kebutuhan dan kemampuan awal peserta.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Siapa saja yang bisa ikut kursus di Global Noor Academy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Kami melayani anak-anak, remaja, mahasiswa, pekerja, dan masyarakat umum yang ingin meningkatkan kemampuan bahasa Inggris untuk sekolah, kuliah, kerja, maupun kebutuhan sehari-hari.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah tersedia kelas privat atau kelompok?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Tersedia. Global Noor Academy dapat menyesuaikan pilihan kelas sesuai kebutuhan, baik privat maupun kelompok, terutama untuk kebutuhan yang lebih spesifik.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana cara mendaftar atau konsultasi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Anda bisa langsung menghubungi admin melalui WhatsApp, mengisi form konsultasi di halaman ini, atau menghubungi Global Noor Academy melalui email dan Instagram.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah ada evaluasi perkembangan belajar?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Ada. Perkembangan siswa dipantau secara berkala melalui latihan, observasi kelas, dan umpan balik dari pengajar agar proses belajar tetap terarah.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <span class="section-label" style="background: rgba(255,255,255,0.16); color: var(--white);">Mulai Sekarang</span>
+            <h2>Siap Belajar Bahasa Inggris dengan Lebih Percaya Diri?</h2>
+            <p>Global Noor Academy siap membantu Anda atau putra-putri Anda belajar bahasa Inggris dengan metode yang lebih nyaman, terarah, dan relevan dengan kebutuhan nyata.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20konsultasi%20program%20kursus." class="btn btn-accent" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    Konsultasi via WhatsApp
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Isi Form Konsultasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-label">Kontak Kami</span>
+                    <h3>Hubungi Global Noor Academy</h3>
+                    <p>Kami siap membantu Anda memilih program yang paling sesuai. Silakan hubungi kami melalui kontak berikut atau isi form konsultasi.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Alamat</h4>
+                                <p>Jl. Desa Tangkil, Kabupaten Bogor, Jawa Barat</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-item-text">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/6285235516178" target="_blank" rel="noopener">6285235516178</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Email</h4>
+                                <a href="mailto:admin.nooracademy@gmail.com">admin.nooracademy@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Instagram</h4>
+                                <a href="https://www.instagram.com/gnracademy" target="_blank" rel="noopener">@gnracademy</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+                            <div class="contact-item-text">
+                                <h4>YouTube</h4>
+                                <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" target="_blank" rel="noopener">englishmercy</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+                        <div class="contact-item-text">
+                            <h4>Akses Materi YouTube</h4>
+                            <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" target="_blank" rel="noopener">youtube.com/@gnracademy</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://wa.me/6285235516178" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/gnracademy" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" class="social-link" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:admin.nooracademy@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+
+                    <div class="map-card">
+                        <i class="fas fa-location-dot"></i>
+                        <h4 style="color:#fff; font-family:'Poppins',sans-serif;">Lokasi Global Noor Academy</h4>
+                        <p>Jl. Desa Tangkil, Kabupaten Bogor, Jawa Barat</p>
+                        <a class="btn" href="https://www.google.com/maps/place/Light+Printing/@-6.7426491,106.86682,19z/data=!4m6!3m5!1s0x2e69cb00700bfced:0xc1e66de5e70040dc!8m2!3d-6.742603!4d106.867707!16s%2Fg%2F11z0pdpqrt?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+                            <i class="fas fa-map"></i>
+                            Buka Lokasi di Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Form Konsultasi</h3>
+                    <p class="form-note">Isi form ini, lalu pesan akan diarahkan otomatis ke WhatsApp admin.</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Nomor WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Contoh 08xxxxxxxxxx" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="program">Program yang Diminati</label>
+                                <select id="program" name="program" required>
+                                    <option value="">Pilih program</option>
+                                    <option>English for Kids</option>
+                                    <option>English for Teens</option>
+                                    <option>General English</option>
+                                    <option>Conversation Class</option>
+                                    <option>Grammar Class</option>
+                                    <option>English for Professionals</option>
+                                    <option>Konsultasi umum</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="level">Level Saat Ini</label>
+                                <select id="level" name="level" required>
+                                    <option value="">Pilih level</option>
+                                    <option>Pemula</option>
+                                    <option>Dasar</option>
+                                    <option>Menengah</option>
+                                    <option>Belum tahu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Kebutuhan / Pesan</label>
+                            <textarea id="message" name="message" placeholder="Tulis kebutuhan Anda, misalnya untuk sekolah, kerja, speaking, grammar, atau privat."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i>
+                            Kirim ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#home" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="logo-text">Global Noor<span>Academy</span></span>
+                    </a>
+                    <p>Global Noor Academy adalah lembaga kursus bahasa Inggris di Bogor yang menghadirkan pembelajaran interaktif, terarah, nyaman, dan relevan untuk berbagai usia dan kebutuhan.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/6285235516178" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/gnracademy" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@englishmercy?si=XAaSZfi5uYu3lzze" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:admin.nooracademy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#programs">Program</a></li>
+                        <li><a href="#pricing">Biaya</a></li>
+                        <li><a href="#method">Metode</a></li>
+                        <li><a href="#youtube-materials">Materi YouTube</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="#programs">English for Kids</a></li>
+                        <li><a href="#programs">English for Teens</a></li>
+                        <li><a href="#programs">General English</a></li>
+                        <li><a href="#programs">Conversation Class</a></li>
+                        <li><a href="#programs">Grammar Class</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Jl. Desa Tangkil, Kabupaten Bogor, Jawa Barat</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/6285235516178" target="_blank" rel="noopener">6285235516178</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:admin.nooracademy@gmail.com">admin.nooracademy@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Global Noor Academy. Seluruh hak cipta dilindungi. Dibuat untuk profil lembaga kursus bahasa Inggris yang profesional dan mudah dipercaya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20bertanya%20tentang%20program%20kursus." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navAnchors = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section[id]');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const programCards = document.querySelectorAll('.program-card');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const contactForm = document.getElementById('contactForm');
+
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 16);
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 130;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navAnchors.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        mobileToggle.addEventListener('click', () => {
+            navbar.classList.toggle('mobile-open');
+        });
+
+        navAnchors.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('mobile-open');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target)) {
+                navbar.classList.remove('mobile-open');
+            }
+        });
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.tab;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                programCards.forEach(card => {
+                    const categories = card.dataset.category.split(' ');
+                    if (filter === 'all' || categories.includes(filter) || categories.includes('all')) {
+                        card.classList.remove('hidden-program');
+                    } else {
+                        card.classList.add('hidden-program');
+                    }
+                });
+            });
+        });
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const program = document.getElementById('program').value.trim();
+            const level = document.getElementById('level').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const text = `Halo Global Noor Academy, saya ingin konsultasi.%0A%0A` +
+                         `Nama: ${encodeURIComponent(name)}%0A` +
+                         `Nomor WhatsApp: ${encodeURIComponent(phone)}%0A` +
+                         `Program diminati: ${encodeURIComponent(program)}%0A` +
+                         `Level saat ini: ${encodeURIComponent(level)}%0A` +
+                         `Pesan: ${encodeURIComponent(message || '-')}`;
+
+            window.open(`https://wa.me/6285235516178?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
