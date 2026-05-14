@@ -86,10 +86,10 @@ body::after{
 }
 #loader.done{opacity:0;visibility:hidden}
 .ld-wordmark{display:flex;flex-direction:column;align-items:center;gap:4px}
-.ld-main{font-family:var(--f-display);font-size:2.4rem;color:var(--c-white);letter-spacing:.02em;overflow:hidden;line-height:1}
+.ld-main{font-family:var(--f-display);font-size:clamp(3.2rem,7vw,5.4rem);color:var(--c-white);letter-spacing:.01em;overflow:hidden;line-height:.95;text-align:center}
 .ld-main span{display:inline-block;animation:ld-rise .9s var(--ease-expo) both}
 .ld-main span:nth-child(2){animation-delay:.15s;color:var(--c-amber)}
-.ld-sub{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);animation:ld-rise .9s var(--ease-expo) .3s both}
+.ld-sub{font-family:var(--f-mono);font-size:clamp(.82rem,1.5vw,1.05rem);letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.55);animation:ld-rise .9s var(--ease-expo) .3s both;text-align:center}
 .ld-bar{width:140px;height:1px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:8px}
 .ld-fill{height:100%;background:linear-gradient(90deg,var(--c-amber),var(--c-gold));animation:ld-prog 1.6s var(--ease-expo) .2s both}
 @keyframes ld-rise{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
@@ -1010,10 +1010,191 @@ body::after{
 .float-game:hover{background:var(--c-forest);transform:translateY(-4px);box-shadow:0 12px 32px rgba(22,51,42,.45)}
 .float-game i{color:var(--c-amber);font-size:.95rem}
 
+
+/* ============================================================
+   PROMO POPUP — DISCOUNT KURSUS BAHASA INGGRIS
+============================================================ */
+.promo-popup{
+  position:fixed;inset:0;z-index:100000;
+  background:rgba(5,18,14,.62);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:center;
+  padding:22px;opacity:0;visibility:hidden;
+  transition:opacity .35s var(--ease-expo),visibility .35s;
+}
+.promo-popup.active{opacity:1;visibility:visible}
+.promo-card{
+  width:min(980px,100%);
+  background:var(--c-white);
+  border-radius:32px;
+  overflow:hidden;
+  display:grid;grid-template-columns:1.05fr .95fr;
+  box-shadow:0 38px 120px rgba(0,0,0,.32);
+  position:relative;border:1px solid rgba(255,255,255,.35);
+  transform:translateY(28px) scale(.98);
+  transition:transform .45s var(--ease-expo);
+}
+.promo-popup.active .promo-card{transform:translateY(0) scale(1)}
+.promo-close{
+  position:absolute;top:16px;right:16px;z-index:2;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.92);color:var(--c-pine);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  transition:all .25s;
+}
+.promo-close:hover{transform:rotate(90deg);background:var(--c-pine);color:var(--c-white)}
+.promo-visual{
+  min-height:430px;
+  background:linear-gradient(135deg,#0b3d91 0%,#0a6ebd 45%,#38bdf8 100%);
+  position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  padding:34px;
+}
+.promo-visual::before{
+  content:'';position:absolute;inset:-40%;
+  background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.22),transparent 28%),radial-gradient(circle at 82% 35%,rgba(212,168,67,.35),transparent 24%),radial-gradient(circle at 50% 92%,rgba(255,255,255,.12),transparent 25%);
+  animation:promo-glow 10s ease-in-out infinite alternate;
+}
+@keyframes promo-glow{from{transform:translate3d(0,0,0) rotate(0)}to{transform:translate3d(4%,2%,0) rotate(8deg)}}
+.promo-ticket{
+  position:relative;z-index:1;width:min(360px,100%);
+  background:rgba(255,255,255,.95);
+  border-radius:28px;padding:28px;text-align:center;
+  box-shadow:0 22px 70px rgba(4,28,58,.25);
+}
+.promo-ticket::before,.promo-ticket::after{content:'';position:absolute;top:50%;width:28px;height:28px;background:#0a6ebd;border-radius:50%;transform:translateY(-50%)}
+.promo-ticket::before{left:-14px}.promo-ticket::after{right:-14px}
+.promo-badge{display:inline-flex;align-items:center;gap:8px;background:var(--c-amber-lt);color:var(--c-gold);padding:7px 13px;border-radius:999px;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.promo-discount{font-family:var(--f-mono);font-size:4.4rem;font-weight:800;line-height:1;color:var(--c-pine);letter-spacing:-.08em}
+.promo-discount span{font-size:1.35rem;letter-spacing:0;margin-left:4px;color:var(--c-sky)}
+.promo-ticket h3{font-family:var(--f-display);font-size:1.75rem;line-height:1.1;color:var(--c-pine);margin:12px 0 8px}
+.promo-ticket p{font-size:.9rem;color:var(--c-slate);line-height:1.65}
+.promo-mini-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.promo-mini{display:inline-flex;align-items:center;gap:6px;background:var(--c-mist);color:var(--c-forest);padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:700}
+.promo-content{padding:48px 42px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,var(--c-white),var(--c-cream))}
+.promo-content .sec-kicker{margin-bottom:12px}.promo-content .sec-kicker::before{width:16px}
+.promo-content h2{font-family:var(--f-display);font-size:clamp(2rem,3.8vw,3rem);line-height:1.07;color:var(--c-pine);margin-bottom:15px}
+.promo-content h2 em{color:var(--c-gold);font-style:italic}
+.promo-content p{color:var(--c-slate);font-size:.95rem;line-height:1.75;margin-bottom:22px}
+.promo-list{display:grid;gap:10px;margin-bottom:26px}
+.promo-list li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--c-ink)}
+.promo-list i{color:var(--c-forest);font-size:.78rem;margin-top:5px}
+.promo-actions{display:flex;gap:10px;flex-wrap:wrap}
+.promo-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:11px;font-weight:700;font-size:.88rem;color:var(--c-pine);border:1.5px solid var(--c-border);transition:all .3s}
+.promo-secondary:hover{border-color:var(--c-pine);background:var(--c-mist)}
+
+/* ============================================================
+   MATERIALS PAGE — HALAMAN BERBEDA DALAM 1 FILE HTML
+============================================================ */
+.materials-page{
+  display:none;position:fixed;inset:0;z-index:10050;
+  background:var(--c-cream);overflow-y:auto;color:var(--c-ink);
+}
+.materials-page.active{display:block}
+.mat-hero{
+  background:radial-gradient(circle at 80% 12%,rgba(10,110,189,.18),transparent 28%),linear-gradient(135deg,var(--c-pine),var(--c-forest));
+  padding:34px 0 76px;position:relative;overflow:hidden;color:var(--c-white)
+}
+.mat-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:54px}
+.mat-logo{font-family:var(--f-display);font-size:1.25rem;font-weight:700}.mat-logo em{font-style:normal;color:var(--c-amber)}
+.mat-back{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:var(--c-white);padding:10px 17px;border-radius:11px;font-weight:700;font-size:.84rem;transition:all .25s}.mat-back:hover{background:rgba(255,255,255,.18)}
+.mat-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.mat-hero h1{font-family:var(--f-display);font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.05;margin-bottom:14px}.mat-hero h1 em{font-style:italic;color:var(--c-amber)}
+.mat-hero p{color:rgba(255,255,255,.68);font-size:1rem;line-height:1.78;max-width:620px;margin-bottom:26px}
+.mat-search-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:24px;backdrop-filter:blur(12px)}
+.mat-search-card h3{font-size:1rem;margin-bottom:10px;color:var(--c-white)}
+.mat-search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.95);border-radius:14px;padding:12px 15px;color:var(--c-pine);margin-bottom:12px}
+.mat-search input{width:100%;border:0;outline:0;background:transparent;font-family:var(--f-body);font-size:.9rem;color:var(--c-ink)}
+.mat-chips{display:flex;gap:8px;flex-wrap:wrap}.mat-chip{padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);font-size:.74rem;font-weight:700;border:1px solid rgba(255,255,255,.14);cursor:pointer}.mat-chip:hover,.mat-chip.active{background:var(--c-amber);color:var(--c-pine)}
+.mat-content{padding:64px 0}.mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.mat-card{background:var(--c-white);border:1px solid var(--c-border);border-radius:24px;overflow:hidden;box-shadow:0 12px 36px rgba(22,51,42,.06);transition:all .35s var(--ease-expo)}
+.mat-card:hover{transform:translateY(-8px);box-shadow:0 28px 74px rgba(22,51,42,.12);border-color:transparent}
+.mat-img{height:178px;position:relative;overflow:hidden;background:var(--c-mist)}.mat-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.mat-card:hover .mat-img img{transform:scale(1.06)}
+.mat-level{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--c-pine);padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.mat-body{padding:23px}.mat-body h3{font-size:1.03rem;color:var(--c-pine);margin-bottom:6px}.mat-grammar{font-size:.78rem;color:var(--c-sky);font-weight:800;margin-bottom:12px}.mat-body p{font-size:.86rem;color:var(--c-slate);line-height:1.68;margin-bottom:16px}
+.mat-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.mat-meta span{display:inline-flex;align-items:center;gap:6px;background:var(--c-cream);border:1px solid var(--c-border);padding:6px 10px;border-radius:999px;font-size:.72rem;color:var(--c-slate);font-weight:700}
+.mat-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--c-pine);color:var(--c-white);padding:12px;border-radius:12px;font-weight:700;transition:all .25s}.mat-btn:hover{background:var(--c-forest);transform:translateY(-2px)}
+.mat-empty{display:none;text-align:center;padding:42px;background:var(--c-white);border:1px solid var(--c-border);border-radius:22px;color:var(--c-slate)}
+.mat-detail{position:fixed;inset:0;background:rgba(5,18,14,.55);z-index:10060;display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(10px)}.mat-detail.active{display:flex}
+.mat-detail-card{width:min(850px,100%);max-height:88vh;overflow:auto;background:var(--c-white);border-radius:28px;padding:34px;box-shadow:0 30px 100px rgba(0,0,0,.28);position:relative}.mat-detail-close{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;background:var(--c-mist);color:var(--c-pine);display:flex;align-items:center;justify-content:center}.mat-detail-close:hover{background:var(--c-pine);color:var(--c-white)}
+.mat-detail h2{font-family:var(--f-display);font-size:2.2rem;color:var(--c-pine);line-height:1.1;margin-bottom:8px}.mat-detail-sub{color:var(--c-sky);font-weight:800;font-size:.84rem;margin-bottom:16px}.mat-detail p{color:var(--c-slate);line-height:1.72}.mat-detail-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}.mat-detail-box{background:var(--c-cream);border:1px solid var(--c-border);border-radius:18px;padding:20px}.mat-detail-box h4{color:var(--c-pine);margin-bottom:10px}.mat-detail-box ul{display:grid;gap:8px}.mat-detail-box li{font-size:.88rem;color:var(--c-slate);display:flex;gap:8px}.mat-detail-box li::before{content:'✓';color:var(--c-forest);font-weight:900}
+
+/* ============================================================
+   ACTIVITY CAROUSEL — FOTO KEGIATAN BELAJAR MENGAJAR
+============================================================ */
+.activity{background:var(--c-cream);overflow:hidden}.activity-shell{position:relative}.activity-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}.activity-top .sec-header{text-align:left;margin-bottom:0}.activity-top .sec-header .sec-kicker{justify-content:flex-start}.activity-top .sec-header .sec-kicker::after{display:none}.activity-controls{display:flex;gap:10px;flex-shrink:0}.activity-btn{width:46px;height:46px;border-radius:50%;background:var(--c-white);border:1px solid var(--c-border);color:var(--c-pine);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(22,51,42,.07);transition:all .25s}.activity-btn:hover{background:var(--c-pine);color:var(--c-white);transform:translateY(-2px)}
+.activity-window{overflow:hidden;margin:0 -40px;padding:8px 40px 18px}.activity-track{display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding-bottom:10px}.activity-track::-webkit-scrollbar{height:6px}.activity-track::-webkit-scrollbar-thumb{background:var(--c-forest);border-radius:10px}.activity-card{min-width:360px;max-width:360px;background:var(--c-white);border-radius:24px;overflow:hidden;border:1px solid var(--c-border);box-shadow:0 14px 44px rgba(22,51,42,.07);scroll-snap-align:start;transition:all .35s var(--ease-expo)}.activity-card:hover{transform:translateY(-6px);box-shadow:0 26px 72px rgba(22,51,42,.12)}.activity-img{height:240px;position:relative;overflow:hidden}.activity-img img{width:100%;height:100%;object-fit:cover;transition:transform .75s}.activity-card:hover .activity-img img{transform:scale(1.07)}.activity-label{position:absolute;left:16px;bottom:16px;background:rgba(22,51,42,.88);color:var(--c-white);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);border-radius:999px;padding:7px 13px;font-size:.74rem;font-weight:800}.activity-body{padding:22px}.activity-body h3{font-size:1rem;color:var(--c-pine);margin-bottom:7px}.activity-body p{font-size:.85rem;color:var(--c-slate);line-height:1.68}.activity-note{margin-top:18px;background:var(--c-white);border:1px dashed rgba(46,112,96,.25);border-radius:16px;padding:16px 18px;color:var(--c-slate);font-size:.85rem}.activity-note b{color:var(--c-pine)}
+
+
+/* ============================================================
+   FINAL LANDING ENHANCEMENTS
+============================================================ */
+.promo-price-tag{
+  margin:16px auto 10px;
+  width:fit-content;
+  display:flex;align-items:flex-end;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,var(--c-pine),var(--c-forest));
+  color:var(--c-white);border-radius:20px;padding:14px 18px 13px;
+  box-shadow:0 18px 42px rgba(22,51,42,.22);
+  border:1px solid rgba(255,255,255,.22);
+}
+.promo-price-tag span{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.66);align-self:center}
+.promo-price-tag strong{font-family:var(--f-mono);font-size:3.15rem;line-height:.82;color:var(--c-amber);letter-spacing:-.09em}
+.promo-price-tag small{font-size:.76rem;color:rgba(255,255,255,.7);font-weight:700;margin-bottom:3px}
+.promo-note-price{display:inline-flex;align-items:center;gap:8px;background:var(--c-amber-lt);color:var(--c-pine);padding:9px 13px;border-radius:999px;font-size:.84rem;font-weight:800;margin:-4px 0 18px;border:1px solid rgba(184,144,42,.25)}
+.promo-note-price i{color:var(--c-gold)}
+
+.prog-card{background:linear-gradient(180deg,var(--c-white),#fffdf8)}
+.prog-media{height:186px;position:relative;overflow:hidden;background:var(--c-mist)}
+.prog-media img{width:100%;height:100%;object-fit:cover;transition:transform .75s ease,filter .35s ease}
+.prog-card:hover .prog-media img{transform:scale(1.08);filter:saturate(1.08) contrast(1.03)}
+.prog-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,22,18,.6),rgba(11,22,18,.06) 58%,transparent)}
+.prog-ribbon{position:absolute;left:16px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.92);color:var(--c-pine);padding:7px 12px;border-radius:999px;font-size:.72rem;font-weight:800;box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.prog-ribbon i{color:var(--c-sky)}
+.prog-head{padding:23px 24px 21px}
+.prog-body{padding:24px 25px 26px}
+.prog-grid{align-items:stretch}
+.prog-card .prog-desc{min-height:75px}
+
+#game-page::before{
+  content:'';position:fixed;inset:-20%;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle at 18% 20%,rgba(212,168,67,.18),transparent 22%),radial-gradient(circle at 78% 30%,rgba(10,110,189,.24),transparent 25%),radial-gradient(circle at 50% 85%,rgba(61,140,118,.22),transparent 24%);
+  animation:gameAura 12s ease-in-out infinite alternate;
+}
+@keyframes gameAura{from{transform:rotate(0deg) scale(1)}to{transform:rotate(6deg) scale(1.05)}}
+.game-card{min-height:242px;text-align:left;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.game-card h3,.game-card p,.game-card .gc-badge,.game-card .gc-icon{position:relative;z-index:2}
+.gc-icon{margin:0 0 18px}
+.gc-abstract{position:absolute;inset:0;z-index:0;opacity:.92;overflow:hidden}
+.gc-abstract::before,.gc-abstract::after{content:'';position:absolute;border-radius:999px;filter:blur(2px)}
+.gc-abstract::before{width:160px;height:160px;right:-48px;top:-44px;background:linear-gradient(135deg,rgba(212,168,67,.36),rgba(255,255,255,.04));animation:blobMove 7s ease-in-out infinite}
+.gc-abstract::after{width:120px;height:120px;left:-38px;bottom:-36px;background:linear-gradient(135deg,rgba(10,110,189,.35),rgba(61,140,118,.18));animation:blobMove 8.5s ease-in-out infinite reverse}
+.game-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,51,42,.02),rgba(5,18,14,.48));z-index:1;pointer-events:none}
+@keyframes blobMove{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-10px,18px) scale(1.12)}}
+.speed-area,.story-area{display:none;max-width:760px;margin:0 auto}
+.speed-area.active,.story-area.active{display:block}
+.st-word-card,.sb-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:30px;margin-bottom:18px;box-shadow:0 18px 50px rgba(0,0,0,.12)}
+.st-direction{font-family:var(--f-mono);font-size:.7rem;color:var(--c-amber);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.st-word{font-family:var(--f-display);font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;color:var(--c-white);font-weight:700}
+.st-sub{color:rgba(255,255,255,.55);font-size:.88rem;margin-top:10px}
+.st-opts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:14px}
+.st-opt{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.12);border-radius:13px;color:rgba(255,255,255,.85);padding:15px 18px;font-weight:700;text-align:left;transition:all .25s}
+.st-opt:hover:not(:disabled){border-color:var(--c-amber);transform:translateY(-2px);background:rgba(184,144,42,.12);color:var(--c-white)}
+.st-opt.correct{border-color:#4ade80;background:rgba(34,197,94,.13);color:#dcfce7}.st-opt.wrong{border-color:#f87171;background:rgba(239,68,68,.13);color:#fee2e2}
+.sb-title{font-family:var(--f-display);font-size:1.65rem;color:var(--c-white);margin-bottom:7px}.sb-desc{color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.65;margin-bottom:18px}
+.sb-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sb-box{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px;min-height:250px}.sb-label{font-family:var(--f-mono);font-size:.68rem;color:rgba(255,255,255,.42);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.sb-piece{width:100%;display:block;background:rgba(255,255,255,.075);border:1.5px solid rgba(255,255,255,.11);border-radius:11px;color:rgba(255,255,255,.8);padding:12px 14px;text-align:left;font-size:.86rem;line-height:1.48;margin-bottom:9px;transition:all .25s}
+.sb-piece:hover{border-color:var(--c-amber);color:var(--c-white);transform:translateX(3px)}
+.sb-piece.used{opacity:.35;pointer-events:none}.sb-answer .sb-piece{background:rgba(10,110,189,.16);border-color:rgba(10,110,189,.32)}
+.sb-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sb-actions .sc-btn{flex:1;min-width:150px}
+@media(max-width:768px){.st-opts,.sb-columns{grid-template-columns:1fr}.game-card{min-height:220px}.promo-price-tag strong{font-size:2.45rem}}
+
 /* ============================================================
    RESPONSIVE
 ============================================================ */
 @media(max-width:1100px){
+  .promo-card,.mat-hero-grid{grid-template-columns:1fr}
+  .mat-grid{grid-template-columns:repeat(2,1fr)}
   .hero-wrap,.about-grid,.method-grid,.contact-grid{grid-template-columns:1fr;gap:52px}
   .prog-grid,.why-grid,.testi-grid,.price-grid{grid-template-columns:repeat(2,1fr)}
   .val-grid{grid-template-columns:repeat(2,1fr)}
@@ -1028,6 +1209,10 @@ body::after{
   .game-cards-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
+  .promo-card{grid-template-columns:1fr;max-height:92vh;overflow:auto}
+  .promo-visual{min-height:300px}.promo-content{padding:34px 24px}
+  .mat-grid,.mat-detail-cols{grid-template-columns:1fr}
+  .activity-top{align-items:flex-start;flex-direction:column}.activity-card{min-width:82vw;max-width:82vw}
   .nav-links,.nav-cta,.nav-online{display:none}
   .hamburger{display:flex}
   .prog-grid,.why-grid,.testi-grid,.price-grid,.val-grid,.of-grid{grid-template-columns:1fr}
@@ -1044,6 +1229,7 @@ body::after{
   .gpm{padding:24px 20px}
 }
 @media(max-width:480px){
+  .promo-discount{font-size:3.5rem}.mat-top{flex-direction:column;align-items:flex-start}.mat-detail-card{padding:28px 20px}
   .container{padding:0 20px}
   .nav-wrap{padding:0 20px}
   .section{padding:80px 0}
@@ -1069,6 +1255,44 @@ body::after{
 <div class="cur-dot" id="curDot"></div>
 <div class="cur-ring" id="curRing"></div>
 
+
+<!-- ============================================================
+     PROMO POPUP
+============================================================ -->
+<div class="promo-popup" id="promoPopup" aria-hidden="true">
+  <div class="promo-card" role="dialog" aria-label="Promo Kursus Bahasa Inggris">
+    <button class="promo-close" onclick="closePromo()" aria-label="Tutup promo"><i class="fas fa-times"></i></button>
+    <div class="promo-visual">
+      <div class="promo-ticket">
+        <div class="promo-badge"><i class="fas fa-bolt"></i> Limited Promo</div>
+        <div class="promo-discount">30<span>% OFF</span></div>
+        <h3>English Course Discount</h3>
+        <p>Belajar lebih percaya diri dengan kelas online interaktif bersama Global Noor Academy.</p>
+        <div class="promo-mini-row">
+          <span class="promo-mini"><i class="fas fa-video"></i> Live Class</span>
+          <span class="promo-mini"><i class="fas fa-book-open"></i> Free Material</span>
+          <span class="promo-mini"><i class="fas fa-certificate"></i> Certificate</span>
+        </div>
+      </div>
+    </div>
+    <div class="promo-content">
+      <div class="sec-kicker">Promo Kursus Bahasa Inggris</div>
+      <h2>Daftar bulan ini, dapat <em>diskon spesial</em></h2>
+      <p>Promo awal untuk siswa baru. Cocok untuk anak, remaja, mahasiswa, dan profesional yang ingin meningkatkan speaking, grammar, vocabulary, dan confidence.</p>
+      <ul class="promo-list">
+        <li><i class="fas fa-check-circle"></i> Konsultasi level gratis sebelum mulai kelas</li>
+        <li><i class="fas fa-check-circle"></i> Materi belajar digital dan latihan terarah</li>
+        <li><i class="fas fa-check-circle"></i> Jadwal fleksibel dan belajar 100% online</li>
+      </ul>
+      <div class="promo-actions">
+        <a class="btn btn-pine" href="https://wa.me/6285235516178?text=Halo%20Global%20Noor%20Academy,%20saya%20tertarik%20promo%2099K%20kursus%20Bahasa%20Inggris." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Klaim Promo</span></a>
+        <button class="promo-secondary" onclick="closePromo()"><i class="fas fa-eye-slash"></i> Nanti Saja</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- ============================================================
      GAME PAGE
 ============================================================ -->
@@ -1088,40 +1312,46 @@ body::after{
       </div>
       <div class="game-cards-grid">
         <div class="game-card" onclick="startQuiz()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-brain"></i></div>
           <h3>Quiz Master</h3>
-          <p>Uji pengetahuan vocabulary, grammar, dan idiom dengan 15 pertanyaan pilihan ganda.</p>
+          <p>Uji vocabulary, grammar, dan idiom dengan 15 pertanyaan pilihan ganda.</p>
           <span class="gc-badge b-med">Medium</span>
         </div>
         <div class="game-card" onclick="startWordMatch()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-link"></i></div>
           <h3>Word Match</h3>
           <p>Pasangkan kata Bahasa Inggris dengan artinya sebelum waktu habis.</p>
           <span class="gc-badge b-easy">Easy</span>
         </div>
         <div class="game-card" onclick="startFillBlank()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-pen-nib"></i></div>
           <h3>Fill in the Blank</h3>
           <p>Lengkapi kalimat Bahasa Inggris dengan kata yang paling tepat.</p>
           <span class="gc-badge b-med">Medium</span>
         </div>
         <div class="game-card" onclick="startScramble()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-shuffle"></i></div>
           <h3>Word Scramble</h3>
           <p>Susun huruf acak menjadi kata Bahasa Inggris yang benar.</p>
           <span class="gc-badge b-fun">Fun</span>
         </div>
-        <div class="game-card" style="cursor:default;opacity:.5">
+        <div class="game-card" onclick="startSpeedTranslate()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-bolt"></i></div>
           <h3>Speed Translate</h3>
-          <p>Terjemahkan kata secepat mungkin sebelum waktu habis.</p>
-          <span class="gc-badge b-soon">Coming Soon</span>
+          <p>Terjemahkan kata dengan cepat sebelum waktu habis. Latihan refleks vocabulary.</p>
+          <span class="gc-badge b-hard">Fast</span>
         </div>
-        <div class="game-card" style="cursor:default;opacity:.5">
+        <div class="game-card" onclick="startStoryBuilder()">
+          <div class="gc-abstract"></div>
           <div class="gc-icon"><i class="fas fa-book-open"></i></div>
           <h3>Story Builder</h3>
-          <p>Susun kalimat menjadi paragraf yang logis dan benar.</p>
-          <span class="gc-badge b-soon">Coming Soon</span>
+          <p>Susun kalimat acak menjadi paragraf yang logis dan benar.</p>
+          <span class="gc-badge b-fun">Creative</span>
         </div>
       </div>
     </div>
@@ -1223,6 +1453,119 @@ body::after{
         </div>
       </div>
     </div>
+
+    <!-- SPEED TRANSLATE -->
+    <div class="speed-area" id="st-area">
+      <div class="qmeta">
+        <div class="qscore"><i class="fas fa-bolt"></i> <span id="st-score">0</span> pts</div>
+        <div class="wm-timer"><i class="fas fa-clock"></i> <span id="st-time">35</span>s</div>
+      </div>
+      <div class="st-word-card">
+        <div class="st-direction" id="st-direction">Translate this word</div>
+        <div class="st-word" id="st-word"></div>
+        <div class="st-sub" id="st-count">Soal 1 / 10</div>
+      </div>
+      <div class="st-opts" id="st-opts"></div>
+      <div class="q-feedback" id="st-fb"></div>
+      <button class="q-next" id="st-next" onclick="nextST()">Lanjut <i class="fas fa-arrow-right"></i></button>
+      <div class="q-end" id="st-end">
+        <div class="qe-score" id="ste-score"></div>
+        <div class="qe-lbl">Total Poin</div>
+        <div class="qe-title" id="ste-title"></div>
+        <p class="qe-desc" id="ste-desc"></p>
+        <div class="qe-btns">
+          <button class="qe-restart" onclick="startSpeedTranslate()"><i class="fas fa-redo"></i> Main Lagi</button>
+          <button class="qe-back" onclick="showMenu()"><i class="fas fa-th"></i> Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY BUILDER -->
+    <div class="story-area" id="sb-area">
+      <div class="qmeta">
+        <div class="qscore"><i class="fas fa-book-open"></i> <span id="sb-score">0</span> pts</div>
+        <div class="qcount" id="sb-count">Cerita 1 / 3</div>
+      </div>
+      <div class="sb-panel">
+        <h3 class="sb-title" id="sb-title"></h3>
+        <p class="sb-desc">Klik kalimat di kolom kiri untuk menyusun paragraf yang runtut di kolom kanan.</p>
+        <div class="sb-columns">
+          <div class="sb-box">
+            <div class="sb-label">Kalimat Acak</div>
+            <div id="sb-pieces"></div>
+          </div>
+          <div class="sb-box sb-answer">
+            <div class="sb-label">Susunan Jawaban</div>
+            <div id="sb-answer"></div>
+          </div>
+        </div>
+        <div class="sb-actions">
+          <button class="sc-btn sc-clear" onclick="resetSBAnswer()"><i class="fas fa-eraser"></i> Reset</button>
+          <button class="sc-btn sc-check" onclick="checkSB()"><i class="fas fa-check"></i> Cek Paragraf</button>
+        </div>
+      </div>
+      <div class="q-feedback" id="sb-fb"></div>
+      <button class="q-next" id="sb-next" onclick="nextSB()">Cerita Berikutnya <i class="fas fa-arrow-right"></i></button>
+      <div class="q-end" id="sb-end">
+        <div class="qe-score" id="sbe-score"></div>
+        <div class="qe-lbl">Total Poin</div>
+        <div class="qe-title" id="sbe-title"></div>
+        <p class="qe-desc" id="sbe-desc"></p>
+        <div class="qe-btns">
+          <button class="qe-restart" onclick="startStoryBuilder()"><i class="fas fa-redo"></i> Main Lagi</button>
+          <button class="qe-back" onclick="showMenu()"><i class="fas fa-th"></i> Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     MATERIALS PAGE
+============================================================ -->
+<div id="materials-page" class="materials-page">
+  <div class="mat-hero">
+    <div class="container">
+      <div class="mat-top">
+        <div class="mat-logo">Global Noor <em>Materials</em></div>
+        <button class="mat-back" onclick="closeMaterials()"><i class="fas fa-arrow-left"></i> Kembali ke Website</button>
+      </div>
+      <div class="mat-hero-grid">
+        <div>
+          <div class="sec-kicker" style="color:rgba(255,255,255,.78)">English Learning Materials</div>
+          <h1>Perpustakaan <em>Materi Bahasa Inggris</em></h1>
+          <p>Kumpulan materi pembelajaran Bahasa Inggris yang rapi, interaktif, dan mudah dipilih sesuai level, tema, serta kebutuhan belajar siswa.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/6285235516178?text=Halo%20Global%20Noor%20Academy,%20saya%20ingin%20konsultasi%20materi%20Bahasa%20Inggris." class="btn btn-amber" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Konsultasi Materi</a>
+          </div>
+        </div>
+        <div class="mat-search-card">
+          <h3>Cari materi cepat</h3>
+          <div class="mat-search"><i class="fas fa-search"></i><input id="materialSearch" type="text" placeholder="Cari: grammar, speaking, beginner..." oninput="renderMaterials()"></div>
+          <div class="mat-chips" id="matChips">
+            <button class="mat-chip active" onclick="setMaterialFilter('all',this)">Semua</button>
+            <button class="mat-chip" onclick="setMaterialFilter('Beginner',this)">Beginner</button>
+            <button class="mat-chip" onclick="setMaterialFilter('Intermediate',this)">Intermediate</button>
+            <button class="mat-chip" onclick="setMaterialFilter('Speaking',this)">Speaking</button>
+            <button class="mat-chip" onclick="setMaterialFilter('Grammar',this)">Grammar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mat-content">
+    <div class="container">
+      <div class="mat-grid" id="materialsGrid"></div>
+      <div class="mat-empty" id="materialsEmpty"><i class="fas fa-search"></i> Materi tidak ditemukan. Coba kata kunci lain.</div>
+    </div>
+  </div>
+
+  <div class="mat-detail" id="materialDetail">
+    <div class="mat-detail-card">
+      <button class="mat-detail-close" onclick="closeMaterialDetail()"><i class="fas fa-times"></i></button>
+      <div id="materialDetailContent"></div>
+    </div>
   </div>
 </div>
 
@@ -1239,6 +1582,8 @@ body::after{
       <a href="#home" class="active">Beranda</a>
       <a href="#about">Tentang</a>
       <a href="#programs">Program</a>
+      <a href="javascript:void(0)" onclick="openMaterials()">Materi</a>
+      <a href="#activity">Activity</a>
       <a href="#pricing">Biaya</a>
       <a href="#method">Metode</a>
       <a href="#testimonials">Testimoni</a>
@@ -1258,6 +1603,8 @@ body::after{
   <a href="#home" onclick="closeMenu()">Beranda</a>
   <a href="#about" onclick="closeMenu()">Tentang</a>
   <a href="#programs" onclick="closeMenu()">Program</a>
+  <a href="javascript:void(0)" onclick="closeMenu();openMaterials()">Materi</a>
+  <a href="#activity" onclick="closeMenu()">Activity</a>
   <a href="#pricing" onclick="closeMenu()">Biaya</a>
   <a href="#method" onclick="closeMenu()">Metode</a>
   <a href="#testimonials" onclick="closeMenu()">Testimoni</a>
@@ -1285,6 +1632,7 @@ body::after{
       <div class="hero-btns">
         <a href="https://wa.me/6285235516178?text=Halo%20Noor%20Academy,%20saya%20ingin%20daftar%20kursus%20online." class="btn btn-pine" target="_blank" rel="noopener"><i class="fas fa-rocket"></i><span>Daftar Sekarang</span></a>
         <a href="#programs" class="btn btn-outline"><i class="fas fa-book-open"></i> Lihat Program</a>
+        <button class="btn btn-sky" onclick="openMaterials()"><i class="fas fa-layer-group"></i> Materi Belajar</button>
         <a href="https://youtube.com/@englishmercy" class="btn btn-amber" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> YouTube Gratis</a>
       </div>
       <div class="hero-stats">
@@ -1512,6 +1860,7 @@ body::after{
     <div class="prog-grid">
       <div class="prog-card reveal d1" data-cat="kids">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-child"></i></div><h3>English for Kids</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> Usia 6–12 Tahun</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=85" alt="English for Kids" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Fun Online Kids Class</span></div>
         <div class="prog-body">
           <p class="prog-desc">Kelas online khusus anak dengan pendekatan bermain yang seru. Belajar dari rumah sambil membangun fondasi Bahasa Inggris yang kuat.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> Kelas live yang fun dan interaktif</li><li><i class="fas fa-check-circle"></i> Lagu, games, dan aktivitas online</li><li><i class="fas fa-check-circle"></i> Pengucapan yang benar sejak dini</li><li><i class="fas fa-check-circle"></i> Materi dikirim ke WhatsApp orang tua</li></ul>
@@ -1520,6 +1869,7 @@ body::after{
       </div>
       <div class="prog-card reveal d2" data-cat="teens">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-user-graduate"></i></div><h3>English for Teens</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> SMP &amp; SMA</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=85" alt="English for Teens" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Interactive Teen Class</span></div>
         <div class="prog-body">
           <p class="prog-desc">Program online untuk siswa sekolah menengah. Speaking, grammar, dan persiapan ujian dilakukan interaktif via video call.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> Diskusi dan speaking online aktif</li><li><i class="fas fa-check-circle"></i> Penguatan grammar via latihan live</li><li><i class="fas fa-check-circle"></i> Persiapan ujian dan tugas sekolah</li><li><i class="fas fa-check-circle"></i> PDF materi dan rekaman kelas</li></ul>
@@ -1528,6 +1878,7 @@ body::after{
       </div>
       <div class="prog-card reveal d3" data-cat="adults">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-briefcase"></i></div><h3>General English Online</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> Mahasiswa &amp; Umum</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=85" alt="General English Online" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Structured Learning</span></div>
         <div class="prog-body">
           <p class="prog-desc">Program komprehensif membangun kemampuan Bahasa Inggris secara menyeluruh melalui kelas online terstruktur dan interaktif.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> 4 skills: Listening, Speaking, Reading, Writing</li><li><i class="fas fa-check-circle"></i> Grammar terstruktur dan praktis</li><li><i class="fas fa-check-circle"></i> Percakapan sehari-hari dan formal</li><li><i class="fas fa-check-circle"></i> Progress report bulanan</li></ul>
@@ -1536,6 +1887,7 @@ body::after{
       </div>
       <div class="prog-card reveal d1" data-cat="teens adults">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-comments"></i></div><h3>Conversation Class Online</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> Semua Level</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=85" alt="Conversation Class Online" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Speaking Practice</span></div>
         <div class="prog-body">
           <p class="prog-desc">Fokus berbicara lancar dan percaya diri melalui sesi online intens. Topik menarik, diskusi nyata, feedback langsung dari pengajar.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> Praktik speaking intensif via video call</li><li><i class="fas fa-check-circle"></i> Topik kehidupan nyata yang relevan</li><li><i class="fas fa-check-circle"></i> Koreksi langsung dan feedback detail</li><li><i class="fas fa-check-circle"></i> Meningkatkan kepercayaan diri berbicara</li></ul>
@@ -1544,6 +1896,7 @@ body::after{
       </div>
       <div class="prog-card reveal d2" data-cat="teens adults">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-pencil-alt"></i></div><h3>Grammar Class Online</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> Semua Level</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&q=85" alt="Grammar Class Online" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Grammar Mastery</span></div>
         <div class="prog-body">
           <p class="prog-desc">Kuasai grammar Bahasa Inggris secara sistematis dan menyenangkan melalui kelas online dengan latihan langsung bersama pengajar.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> Penjelasan grammar yang jelas dan mudah</li><li><i class="fas fa-check-circle"></i> Latihan intensif via worksheet digital</li><li><i class="fas fa-check-circle"></i> Koreksi langsung di kelas online</li><li><i class="fas fa-check-circle"></i> Evaluasi berkala tiap bulan</li></ul>
@@ -1552,6 +1905,7 @@ body::after{
       </div>
       <div class="prog-card reveal d3" data-cat="adults">
         <div class="prog-head"><div class="prog-icon"><i class="fas fa-university"></i></div><h3>English for Professionals</h3><div class="prog-tags"><span class="prog-tag grey"><i class="fas fa-users"></i> Karyawan &amp; Pekerja</span><span class="prog-tag blue"><i class="fas fa-wifi"></i> Online</span></div></div>
+        <div class="prog-media"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&q=85" alt="English for Professionals" loading="lazy"><span class="prog-ribbon"><i class="fas fa-sparkles"></i> Career English</span></div>
         <div class="prog-body">
           <p class="prog-desc">Program online untuk meningkatkan kemampuan Bahasa Inggris dalam konteks profesional — karier, presentasi, dan wawancara kerja.</p>
           <ul class="prog-perks"><li><i class="fas fa-check-circle"></i> Business English dan email formal</li><li><i class="fas fa-check-circle"></i> Presentasi dan meeting online</li><li><i class="fas fa-check-circle"></i> Interview skills dan LinkedIn</li><li><i class="fas fa-check-circle"></i> Jadwal fleksibel sesuai jam kerja</li></ul>
@@ -1581,39 +1935,46 @@ body::after{
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section gallery">
-  <div class="container">
-    <div class="sec-header reveal">
-      <div class="sec-kicker">Suasana Kelas Online</div>
-      <h2 class="sec-title">Momen Belajar yang <em>Nyata</em></h2>
-      <p class="sec-desc">Interaksi, diskusi, dan semangat belajar yang hadir di setiap sesi kelas online Global Noor Academy.</p>
+<!-- ACTIVITY -->
+<section id="activity" class="section activity">
+  <div class="container activity-shell">
+    <div class="activity-top reveal">
+      <div class="sec-header">
+        <div class="sec-kicker">Activity</div>
+        <h2 class="sec-title">Foto Kegiatan <em>Belajar Mengajar</em></h2>
+        <p class="sec-desc">Dokumentasi suasana kelas, diskusi, speaking practice, dan kegiatan belajar siswa. Tampilan kegiatan kelas, diskusi, speaking practice, dan proses belajar yang interaktif.</p>
+      </div>
+      <div class="activity-controls">
+        <button class="activity-btn" onclick="slideActivity(-1)" aria-label="Geser kiri"><i class="fas fa-arrow-left"></i></button>
+        <button class="activity-btn" onclick="slideActivity(1)" aria-label="Geser kanan"><i class="fas fa-arrow-right"></i></button>
+      </div>
     </div>
-    <div class="gal-grid reveal">
-      <div class="gal-item gal-big">
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=85" alt="Sesi kelas online" loading="lazy">
-        <div class="gal-scrim"></div>
-        <div class="gal-lbl">Sesi Live Class Interaktif</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&q=85" alt="Belajar online" loading="lazy">
-        <div class="gal-scrim"></div>
-        <div class="gal-lbl">Belajar dari Rumah</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=500&q=85" alt="Video call class" loading="lazy">
-        <div class="gal-scrim"></div>
-        <div class="gal-lbl">Sesi Video Call</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=85" alt="Materi digital" loading="lazy">
-        <div class="gal-scrim"></div>
-        <div class="gal-lbl">Materi Digital</div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=500&q=85" alt="Sesi speaking online" loading="lazy">
-        <div class="gal-scrim"></div>
-        <div class="gal-lbl">Latihan Speaking</div>
+    <div class="activity-window reveal d1">
+      <div class="activity-track" id="activityTrack">
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=85" alt="Sesi live class online" loading="lazy"><span class="activity-label">Live Class</span></div>
+          <div class="activity-body"><h3>Sesi Live Class Interaktif</h3><p>Siswa belajar melalui video meeting dengan diskusi, latihan speaking, dan feedback langsung dari tutor.</p></div>
+        </article>
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=85" alt="Belajar bersama" loading="lazy"><span class="activity-label">Group Learning</span></div>
+          <div class="activity-body"><h3>Diskusi Kelompok</h3><p>Aktivitas kelompok membantu siswa lebih berani bertanya, menjawab, dan menyampaikan pendapat.</p></div>
+        </article>
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&q=85" alt="Kelas online" loading="lazy"><span class="activity-label">Online Session</span></div>
+          <div class="activity-body"><h3>Belajar dari Rumah</h3><p>Kelas tetap aktif dan terarah walaupun dilakukan secara online dari rumah masing-masing.</p></div>
+        </article>
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=85" alt="Aktivitas kelas" loading="lazy"><span class="activity-label">Class Activity</span></div>
+          <div class="activity-body"><h3>Latihan Materi Digital</h3><p>Siswa mendapatkan materi digital, tugas ringan, dan aktivitas praktik untuk memperkuat pemahaman.</p></div>
+        </article>
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=800&q=85" alt="Speaking practice" loading="lazy"><span class="activity-label">Speaking</span></div>
+          <div class="activity-body"><h3>Speaking Practice</h3><p>Latihan percakapan dua arah agar siswa lebih percaya diri menggunakan Bahasa Inggris.</p></div>
+        </article>
+        <article class="activity-card">
+          <div class="activity-img"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=85" alt="Tutor mengajar" loading="lazy"><span class="activity-label">Tutor</span></div>
+          <div class="activity-body"><h3>Teacher Feedback</h3><p>Tutor memberi arahan, koreksi, dan motivasi agar perkembangan siswa lebih mudah dipantau.</p></div>
+        </article>
       </div>
     </div>
   </div>
@@ -1911,6 +2272,8 @@ body::after{
           <li><a href="#home">Beranda</a></li>
           <li><a href="#about">Tentang</a></li>
           <li><a href="#programs">Program</a></li>
+          <li><a href="javascript:void(0)" onclick="openMaterials()">Materi</a></li>
+          <li><a href="#activity">Activity</a></li>
           <li><a href="#pricing">Biaya</a></li>
           <li><a href="#method">Metode</a></li>
           <li><a href="#testimonials">Testimoni</a></li>
@@ -1960,7 +2323,7 @@ const dot=document.getElementById('curDot'),ring=document.getElementById('curRin
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
 (function animRing(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
-document.querySelectorAll('a,button,.prog-card,.testi-card,.val-card,.of-card,.game-card,.mstep,.step').forEach(el=>{
+document.querySelectorAll('a,button,.prog-card,.testi-card,.val-card,.of-card,.game-card,.mstep,.step,.mat-card,.activity-card').forEach(el=>{
   el.addEventListener('mouseenter',()=>{ring.style.transform='translate(-50%,-50%) scale(1.7)';ring.style.borderColor='var(--c-amber)'});
   el.addEventListener('mouseleave',()=>{ring.style.transform='translate(-50%,-50%) scale(1)';ring.style.borderColor='var(--c-forest)'});
 });
@@ -2057,14 +2420,188 @@ document.getElementById('consForm').addEventListener('submit',e=>{
   window.open(`https://wa.me/6285235516178?text=${txt}`,'_blank');
 });
 
+
+/* ============================================================
+   PROMO POPUP
+============================================================ */
+function openPromo(){
+  const popup=document.getElementById('promoPopup');
+  if(popup){popup.classList.add('active');popup.setAttribute('aria-hidden','false')}
+}
+function closePromo(){
+  const popup=document.getElementById('promoPopup');
+  if(popup){popup.classList.remove('active');popup.setAttribute('aria-hidden','true')}
+  sessionStorage.setItem('promoClosed','1');
+}
+window.addEventListener('load',()=>{
+  setTimeout(()=>{if(!sessionStorage.getItem('promoClosed'))openPromo()},2400);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePromo();closeMaterials();closeMaterialDetail();}});
+const promoPopupEl=document.getElementById('promoPopup');
+if(promoPopupEl){promoPopupEl.addEventListener('click',e=>{if(e.target===promoPopupEl)closePromo()});}
+
+/* ============================================================
+   MATERIALS PAGE DATA
+============================================================ */
+const materialData=[
+  {
+    title:'Daily Routines',
+    level:'Beginner',
+    category:'Grammar',
+    grammar:'Simple Present Tense',
+    image:'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=85',
+    desc:'Materi dasar untuk menceritakan aktivitas harian dengan kalimat sederhana dan jelas.',
+    objectives:['Students can describe daily activities','Students can use verb 1 correctly','Students can ask and answer routine questions'],
+    vocabulary:['wake up','pray','study','eat breakfast','go to school','sleep','usually','every day'],
+    activities:['Warming up: What do you do every morning?','Conversation practice about daily schedule','Fill in the blank using simple present']
+  },
+  {
+    title:'My House and Bedroom',
+    level:'Beginner',
+    category:'Grammar',
+    grammar:'Prepositions of Place',
+    image:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=85',
+    desc:'Materi untuk menjelaskan posisi benda di rumah dan kamar tidur menggunakan preposition.',
+    objectives:['Students can name rooms and objects','Students can use in, on, under, beside, between','Students can describe their bedroom'],
+    vocabulary:['bed','desk','chair','wardrobe','pillow','window','beside','under'],
+    activities:['Describe your bedroom in 5 sentences','Pair work: ask where things are','Picture description challenge']
+  },
+  {
+    title:'Healthy Lifestyle',
+    level:'Beginner',
+    category:'Grammar',
+    grammar:'Adverbs of Frequency',
+    image:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=85',
+    desc:'Materi untuk membahas kebiasaan sehat dan tidak sehat menggunakan always, usually, often, sometimes, never.',
+    objectives:['Students can talk about healthy habits','Students can place adverbs of frequency correctly','Students can compare good and bad habits'],
+    vocabulary:['exercise','vegetables','sleep','water','junk food','always','often','never'],
+    activities:['Habit survey with classmates','Make 10 sentences about your habits','Mini debate: healthy food vs fast food']
+  },
+  {
+    title:'Transportation and Travel',
+    level:'Beginner',
+    category:'Speaking',
+    grammar:'Can / Can\'t',
+    image:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=85',
+    desc:'Materi untuk berbicara tentang transportasi, perjalanan, dan kemampuan menggunakan can/can’t.',
+    objectives:['Students can name transportation types','Students can use can and can’t','Students can make travel conversations'],
+    vocabulary:['bus','train','plane','ticket','station','travel','can','cannot'],
+    activities:['Role play: buying a ticket','Ask and answer about travel ability','Make a simple travel plan']
+  },
+  {
+    title:'Shopping at the Market',
+    level:'Beginner',
+    category:'Grammar',
+    grammar:'Some, Any, Much, Many',
+    image:'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=85',
+    desc:'Materi percakapan belanja di pasar dengan fokus pada jumlah dan pertanyaan sederhana.',
+    objectives:['Students can ask prices','Students can use some and any','Students can use much and many'],
+    vocabulary:['price','vegetables','fruit','money','buy','sell','some','many'],
+    activities:['Market role play','Make shopping questions','Countable and uncountable sorting game']
+  },
+  {
+    title:'Confident Speaking',
+    level:'Intermediate',
+    category:'Speaking',
+    grammar:'Opinion Expressions',
+    image:'https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=85',
+    desc:'Materi untuk melatih siswa menyampaikan opini, alasan, contoh, dan kesimpulan secara rapi.',
+    objectives:['Students can express opinions clearly','Students can give reasons and examples','Students can respond politely in discussions'],
+    vocabulary:['I believe','in my opinion','because','for example','however','therefore','agree','disagree'],
+    activities:['Opinion circle','Mini debate','Speaking feedback session']
+  }
+];
+let currentMaterialFilter='all';
+function openMaterials(){
+  closePromo();
+  const page=document.getElementById('materials-page');
+  if(page){page.classList.add('active');document.body.style.overflow='hidden';renderMaterials();page.scrollTop=0;}
+}
+function closeMaterials(){
+  const page=document.getElementById('materials-page');
+  if(page){page.classList.remove('active');document.body.style.overflow='';}
+}
+function setMaterialFilter(filter,btn){
+  currentMaterialFilter=filter;
+  document.querySelectorAll('.mat-chip').forEach(c=>c.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  renderMaterials();
+}
+function renderMaterials(){
+  const grid=document.getElementById('materialsGrid');
+  const empty=document.getElementById('materialsEmpty');
+  const search=(document.getElementById('materialSearch')?.value||'').toLowerCase();
+  if(!grid)return;
+  const filtered=materialData.filter(m=>{
+    const text=[m.title,m.level,m.category,m.grammar,m.desc,...m.vocabulary].join(' ').toLowerCase();
+    const passFilter=currentMaterialFilter==='all'||m.level===currentMaterialFilter||m.category===currentMaterialFilter;
+    return passFilter&&text.includes(search);
+  });
+  grid.innerHTML=filtered.map((m)=>{
+    const idx=materialData.indexOf(m);
+    return `<article class="mat-card">
+      <div class="mat-img"><img src="${m.image}" alt="${m.title}" loading="lazy"><span class="mat-level">${m.level}</span></div>
+      <div class="mat-body">
+        <h3>${m.title}</h3>
+        <div class="mat-grammar"><i class="fas fa-book-open"></i> ${m.grammar}</div>
+        <p>${m.desc}</p>
+        <div class="mat-meta"><span><i class="fas fa-layer-group"></i> ${m.category}</span><span><i class="fas fa-list-check"></i> ${m.activities.length} Activities</span></div>
+        <button class="mat-btn" onclick="openMaterialDetail(${idx})">Lihat Materi <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>`;
+  }).join('');
+  if(empty)empty.style.display=filtered.length?'none':'block';
+}
+function openMaterialDetail(index){
+  const m=materialData[index];
+  if(!m)return;
+  const box=document.getElementById('materialDetailContent');
+  box.innerHTML=`
+    <h2>${m.title}</h2>
+    <div class="mat-detail-sub">${m.level} • ${m.category} • ${m.grammar}</div>
+    <p>${m.desc}</p>
+    <div class="mat-detail-cols">
+      <div class="mat-detail-box"><h4>Learning Objectives</h4><ul>${m.objectives.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="mat-detail-box"><h4>Key Vocabulary</h4><ul>${m.vocabulary.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="mat-detail-box"><h4>Class Activities</h4><ul>${m.activities.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="mat-detail-box"><h4>Teacher Note</h4><p>Materi ini dirancang untuk pembelajaran interaktif: warming up, explanation, guided practice, dan speaking activity.</p></div>
+    </div>`;
+  document.getElementById('materialDetail').classList.add('active');
+}
+function closeMaterialDetail(){
+  const detail=document.getElementById('materialDetail');
+  if(detail)detail.classList.remove('active');
+}
+const materialDetailEl=document.getElementById('materialDetail');
+if(materialDetailEl){materialDetailEl.addEventListener('click',e=>{if(e.target===materialDetailEl)closeMaterialDetail()});}
+
+/* ============================================================
+   ACTIVITY SLIDER
+============================================================ */
+function slideActivity(direction){
+  const track=document.getElementById('activityTrack');
+  if(!track)return;
+  track.scrollBy({left:direction*380,behavior:'smooth'});
+}
+const activityTrack=document.getElementById('activityTrack');
+if(activityTrack){
+  let activityAuto=setInterval(()=>{
+    if(document.hidden||activityTrack.matches(':hover'))return;
+    const nearEnd=activityTrack.scrollLeft+activityTrack.clientWidth>=activityTrack.scrollWidth-20;
+    activityTrack.scrollTo({left:nearEnd?0:activityTrack.scrollLeft+380,behavior:'smooth'});
+  },3600);
+}
+
 /* ============================================================
    GAME PAGE
 ============================================================ */
 function openGame(){document.getElementById('game-page').classList.add('active');document.body.style.overflow='hidden';showMenu()}
-function closeGame(){document.getElementById('game-page').classList.remove('active');document.body.style.overflow=''}
+function closeGame(){clearInterval(wmTimer);clearInterval(stTimer);document.getElementById('game-page').classList.remove('active');document.body.style.overflow=''}
 function showMenu(){
+  clearInterval(wmTimer);
+  clearInterval(stTimer);
   document.getElementById('gm-menu').style.display='block';
-  document.querySelectorAll('.quiz-area,.wordmatch-area,.fillblank-area,.scramble-area').forEach(a=>a.classList.remove('active'));
+  document.querySelectorAll('.quiz-area,.wordmatch-area,.fillblank-area,.scramble-area,.speed-area,.story-area').forEach(a=>a.classList.remove('active'));
 }
 
 /* ============ QUIZ DATA ============ */
@@ -2244,7 +2781,7 @@ function clearSC(){scAnswer=[];renderSC()}
 function checkSC(){
   const ans=scAnswer.map(i=>scLetters[i]).join('');
   const fb=document.getElementById('sc-fb');
-  if(ans===scWord){fb.textContent='Benar! "+scWord+" — '+scData[scIdx].hint;fb.classList.add('show');fb.style.borderLeftColor='#4ade80';scScore+=10;document.getElementById('sc-score').textContent=scScore;setTimeout(()=>{scIdx++;if(scIdx>=scData.length)endSC();else{fb.className='q-feedback';loadSC()}},1200)}
+  if(ans===scWord){fb.textContent='Benar! '+scWord+' — '+scData[scIdx].hint;fb.classList.add('show');fb.style.borderLeftColor='#4ade80';scScore+=10;document.getElementById('sc-score').textContent=scScore;setTimeout(()=>{scIdx++;if(scIdx>=scData.length)endSC();else{fb.className='q-feedback';loadSC()}},1200)}
   else{fb.textContent='Belum tepat. Coba lagi! Petunjuk: '+scData[scIdx].hint;fb.classList.add('show');fb.style.borderLeftColor='#f87171';scAnswer=[];renderSC()}
 }
 function endSC(){
@@ -2254,6 +2791,110 @@ function endSC(){
   document.getElementById('sce-title').textContent=p>=80?'Word Master!':p>=60?'Bagus Sekali!':'Terus Berlatih!';
   document.getElementById('sce-desc').textContent=p>=80?'Kamu sangat pandai menyusun kata! Kemampuan spelling-mu luar biasa.':'Latihan scramble secara rutin akan membantu meningkatkan spelling dan vocabulary.';
 }
+
+/* ============ SPEED TRANSLATE ============ */
+const stData=[
+  {word:'confident',answer:'percaya diri',opts:['percaya diri','berbahaya','membosankan','terlambat']},
+  {word:'schedule',answer:'jadwal',opts:['jadwal','lemari','suasana','perjalanan']},
+  {word:'improve',answer:'meningkatkan',opts:['meningkatkan','menunda','membaca','menghapus']},
+  {word:'conversation',answer:'percakapan',opts:['percakapan','peraturan','perjalanan','permainan']},
+  {word:'goal',answer:'tujuan',opts:['tujuan','hadiah','pakaian','kelas']},
+  {word:'practice',answer:'latihan',opts:['latihan','istirahat','keluhan','jawaban']},
+  {word:'mistake',answer:'kesalahan',opts:['kesalahan','kesempatan','keberanian','kesehatan']},
+  {word:'polite',answer:'sopan',opts:['sopan','keras','cepat','sepi']},
+  {word:'explain',answer:'menjelaskan',opts:['menjelaskan','mengirim','membeli','menunggu']},
+  {word:'achievement',answer:'pencapaian',opts:['pencapaian','perubahan','pembayaran','pengumuman']}
+];
+let stIdx=0,stScore=0,stAnswered=false,stOptions=[],stTimer=null,stTime=35;
+function startSpeedTranslate(){
+  showMenu();document.getElementById('gm-menu').style.display='none';document.getElementById('st-area').classList.add('active');
+  stIdx=0;stScore=0;stTime=35;loadST();
+  clearInterval(stTimer);
+  stTimer=setInterval(()=>{stTime--;document.getElementById('st-time').textContent=stTime;if(stTime<=0){clearInterval(stTimer);endST()}},1000);
+}
+function loadST(){
+  const d=stData[stIdx];stAnswered=false;
+  document.getElementById('st-score').textContent=stScore;
+  document.getElementById('st-time').textContent=stTime;
+  document.getElementById('st-count').textContent=`Soal ${stIdx+1} / ${stData.length}`;
+  document.getElementById('st-word').textContent=d.word;
+  document.getElementById('st-direction').textContent='Pilih arti Bahasa Indonesia yang paling tepat';
+  stOptions=[...d.opts].sort(()=>Math.random()-.5);
+  document.getElementById('st-opts').innerHTML=stOptions.map((o,i)=>`<button class="st-opt" onclick="answerST(${i})">${o}</button>`).join('');
+  document.getElementById('st-fb').className='q-feedback';
+  document.getElementById('st-next').className='q-next';
+  document.getElementById('st-end').className='q-end';
+}
+function answerST(i){
+  if(stAnswered)return;stAnswered=true;
+  const d=stData[stIdx];
+  const chosen=stOptions[i];
+  document.querySelectorAll('.st-opt').forEach((btn,idx)=>{btn.disabled=true;if(stOptions[idx]===d.answer)btn.classList.add('correct')});
+  if(chosen===d.answer){stScore+=10;document.getElementById('st-score').textContent=stScore;}
+  else{document.querySelectorAll('.st-opt')[i].classList.add('wrong')}
+  const fb=document.getElementById('st-fb');fb.textContent=chosen===d.answer?'Benar! Good job.':'Belum tepat. Jawaban yang benar: '+d.answer+'.';fb.classList.add('show');
+  document.getElementById('st-next').classList.add('show');
+}
+function nextST(){stIdx++;if(stIdx>=stData.length){endST();return}loadST()}
+function endST(){
+  clearInterval(stTimer);
+  document.getElementById('st-opts').innerHTML='';
+  document.getElementById('st-fb').className='q-feedback';
+  document.getElementById('st-next').className='q-next';
+  document.getElementById('st-end').classList.add('show');
+  document.getElementById('ste-score').textContent=stScore;
+  const p=stScore/(stData.length*10)*100;
+  document.getElementById('ste-title').textContent=p>=80?'Fast Thinker!':p>=60?'Good Speed!':'Keep Practicing!';
+  document.getElementById('ste-desc').textContent=p>=80?'Refleks vocabulary kamu sangat bagus.':p>=60?'Kamu cukup cepat, tinggal tambah konsistensi.':'Latihan singkat setiap hari akan membuat vocabulary kamu jauh lebih kuat.';
+}
+
+/* ============ STORY BUILDER ============ */
+const sbData=[
+  {title:'A Productive Morning',lines:['I wake up early and make my bed.','After that, I drink water and review my schedule.','Then, I study English for thirty minutes.','This simple routine helps me start the day with confidence.']},
+  {title:'Online English Class',lines:['Our online class starts with a short warm-up question.','The teacher explains new vocabulary with clear examples.','Students practice speaking in pairs and receive feedback.','At the end, we get a small task to continue practicing at home.']},
+  {title:'Building Confidence',lines:['Many students feel nervous when they speak English.','They can become more confident by practicing small conversations every day.','Mistakes are not failures; they are part of the learning process.','With patience and consistency, speaking English becomes easier.']}
+];
+let sbIdx=0,sbScore=0,sbPieces=[],sbAnswer=[];
+function startStoryBuilder(){
+  showMenu();document.getElementById('gm-menu').style.display='none';document.getElementById('sb-area').classList.add('active');
+  sbIdx=0;sbScore=0;loadSB();
+}
+function loadSB(){
+  const d=sbData[sbIdx];
+  document.getElementById('sb-score').textContent=sbScore;
+  document.getElementById('sb-count').textContent=`Cerita ${sbIdx+1} / ${sbData.length}`;
+  document.getElementById('sb-title').textContent=d.title;
+  sbPieces=d.lines.map((text,order)=>({text,order})).sort(()=>Math.random()-.5);
+  sbAnswer=[];
+  document.getElementById('sb-fb').className='q-feedback';
+  document.getElementById('sb-next').className='q-next';
+  document.getElementById('sb-end').className='q-end';
+  renderSB();
+}
+function renderSB(){
+  document.getElementById('sb-pieces').innerHTML=sbPieces.map((p,i)=>`<button class="sb-piece${sbAnswer.includes(i)?' used':''}" onclick="addSB(${i})">${p.text}</button>`).join('');
+  document.getElementById('sb-answer').innerHTML=sbAnswer.length?sbAnswer.map((i,pos)=>`<button class="sb-piece" onclick="removeSB(${pos})">${pos+1}. ${sbPieces[i].text}</button>`).join(''):'<p style="color:rgba(255,255,255,.32);font-size:.85rem;line-height:1.6">Belum ada kalimat. Klik kalimat acak di sebelah kiri.</p>';
+}
+function addSB(i){if(sbAnswer.includes(i))return;sbAnswer.push(i);renderSB()}
+function removeSB(pos){sbAnswer.splice(pos,1);renderSB()}
+function resetSBAnswer(){sbAnswer=[];renderSB();document.getElementById('sb-fb').className='q-feedback'}
+function checkSB(){
+  const fb=document.getElementById('sb-fb');
+  if(sbAnswer.length<sbPieces.length){fb.textContent='Susun semua kalimat terlebih dahulu.';fb.classList.add('show');fb.style.borderLeftColor='#facc15';return}
+  const correct=sbAnswer.every((idx,pos)=>sbPieces[idx].order===pos);
+  if(correct){sbScore+=20;document.getElementById('sb-score').textContent=sbScore;fb.textContent='Paragraf sudah runtut dan logis. Excellent!';fb.style.borderLeftColor='#4ade80';document.getElementById('sb-next').classList.add('show')}
+  else{fb.textContent='Urutannya belum tepat. Coba perhatikan hubungan waktu dan ide antar kalimat.';fb.style.borderLeftColor='#f87171'}
+  fb.classList.add('show');
+}
+function nextSB(){sbIdx++;if(sbIdx>=sbData.length){endSB();return}loadSB()}
+function endSB(){
+  document.getElementById('sb-end').classList.add('show');
+  document.getElementById('sbe-score').textContent=sbScore;
+  const p=sbScore/(sbData.length*20)*100;
+  document.getElementById('sbe-title').textContent=p>=80?'Story Master!':p>=60?'Nice Work!':'Keep Building!';
+  document.getElementById('sbe-desc').textContent=p>=80?'Kamu mampu menyusun alur paragraf dengan sangat baik.':p>=60?'Urutan ide kamu sudah cukup kuat.':'Latihan menyusun paragraf akan membantu kemampuan reading dan writing kamu.';
+}
+
 </script>
 </body>
 </html>
